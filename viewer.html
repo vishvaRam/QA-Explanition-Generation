@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: white;
+      /* Ensure the iframe has a white background */
+    }
+  </style>
+</head>
+
+<body>
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Superteacher Tablet MCQ Viewer</title>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <style>
+      :root {
+        --bg-page: #0b1120;
+        --tablet-frame: #1e293b;
+        --screen-bg: #ffffff;
+        --primary-purple: #5c3be8;
+        --primary-purple-hover: #4b2fd0;
+        --formula-bg: #f4f3ff;
+        --formula-text: #2e2a72;
+        --light-green-bg: #e8f8f0;
+        --dark-green-text: #065f46;
+        --border-green: #34d399;
+        --card-white: #ffffff;
+        --border-subtle: #e2e8f0;
+        --text-main: #1f2937;
+        --text-muted: #6b7280;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background-color: var(--bg-page);
+        color: #f1f5f9;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 14px;
+      }
+
+      /* Top Controls */
+      .controls-bar {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 18px;
+        background: #1e293b;
+        padding: 10px 22px;
+        border-radius: 12px;
+        border: 1px solid #334155;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+      }
+
+      .file-input-wrapper input[type="file"] {
+        display: none;
+      }
+
+      .btn-action {
+        background: #334155;
+        color: #ffffff;
+        border: 1px solid #475569;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-size: 13.5px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .btn-action:hover {
+        background: #475569;
+      }
+
+      .nav-btn {
+        background: var(--primary-purple);
+        color: #fff;
+        border: none;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.15s;
+      }
+
+      .nav-btn:hover:not(:disabled) {
+        transform: scale(1.08);
+        background: var(--primary-purple-hover);
+      }
+
+      .nav-btn:disabled {
+        opacity: 0.35;
+        cursor: not-allowed;
+      }
+
+      .counter-display {
+        font-size: 14.5px;
+        font-weight: 600;
+        min-width: 75px;
+        text-align: center;
+      }
+
+      /* Tablet Frame */
+      .tablet-device {
+        width: 1080px;
+        max-width: 96vw;
+        height: 730px;
+        background: var(--tablet-frame);
+        border-radius: 32px;
+        padding: 14px;
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65), 0 0 0 1px #334155;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .tablet-screen {
+        background-color: var(--screen-bg);
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        color: var(--text-main);
+      }
+
+      /* Header */
+      .tablet-header {
+        background: #ffffff;
+        border-bottom: 1px solid var(--border-subtle);
+        padding: 12px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .brand-section {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .brand-icon {
+        width: 32px;
+        height: 32px;
+        background: var(--primary-purple);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: 800;
+        font-size: 18px;
+      }
+
+      .brand-title {
+        font-size: 17.5px;
+        font-weight: 700;
+        color: #111827;
+      }
+
+      .streak-badge {
+        background: #f3f4f6;
+        border-radius: 18px;
+        padding: 4px 14px;
+        font-size: 13.5px;
+        font-weight: 700;
+        color: #1f2937;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      /* Workspace */
+      .tablet-workspace {
+        display: grid;
+        grid-template-columns: 46% 54%;
+        flex: 1;
+        overflow: hidden;
+      }
+
+      /* Left panel */
+      .left-panel {
+        border-right: 1px solid var(--border-subtle);
+        padding: 22px 20px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        background: #ffffff;
+      }
+
+      .badges-row {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .tag {
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 4px 10px;
+        border-radius: 6px;
+        background: #def7ec;
+        color: #046c4e;
+        letter-spacing: 0.5px;
+      }
+
+      .tag-orange {
+        background: #feeedb;
+        color: #b45309;
+      }
+
+      .question-card {
+        background: var(--primary-purple);
+        color: #ffffff;
+        padding: 18px 20px;
+        border-radius: 18px;
+        font-size: 14.5px;
+        line-height: 1.6;
+      }
+
+      .question-card .katex {
+        color: #ffffff !important;
+      }
+
+      .options-title {
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        margin-top: 4px;
+      }
+
+      .options-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .option-item {
+        background: #ffffff;
+        border: 1.5px solid var(--border-subtle);
+        border-radius: 14px;
+        padding: 10px 14px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .option-key {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: #f1f5f9;
+        color: #475569;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+
+      .option-text {
+        font-size: 13.5px;
+        color: #1e293b;
+        flex: 1;
+        line-height: 1.5;
+      }
+
+      .option-item.correct {
+        background: #edfcf4;
+        border-color: var(--border-green);
+      }
+
+      .option-item.correct .option-key {
+        background: #10b981;
+        color: #ffffff;
+      }
+
+      .option-item.correct .option-text {
+        color: var(--dark-green-text);
+        font-weight: 600;
+      }
+
+      .correct-badge {
+        font-size: 11px;
+        font-weight: 700;
+        color: #047857;
+        background: #d1fae5;
+        padding: 3px 10px;
+        border-radius: 10px;
+        white-space: nowrap;
+      }
+
+      /* Right panel */
+      .right-panel {
+        padding: 22px 28px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        background: #ffffff;
+      }
+
+      .solution-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 14px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--border-subtle);
+      }
+
+      .solution-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: #111827;
+      }
+
+      .action-icons {
+        display: flex;
+        gap: 8px;
+      }
+
+      .icon-btn {
+        background: #f3f4f6;
+        border: 1px solid var(--border-subtle);
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        color: #4b5563;
+      }
+
+      /* Solution content */
+      .markdown-content {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #374151;
+      }
+
+      .markdown-content h2,
+      .markdown-content h3,
+      .markdown-content h4,
+      .markdown-content strong {
+        color: #111827;
+        font-size: 15px;
+      }
+
+      .section-title {
+        font-size: 14.5px;
+        font-weight: 700;
+        color: #111827;
+        margin-top: 10px;
+        margin-bottom: 4px;
+      }
+
+      .formula-callout {
+        background: var(--formula-bg);
+        color: var(--formula-text);
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin: 6px 0 14px 0;
+        font-size: 13.5px;
+        line-height: 1.6;
+      }
+
+      .markdown-content ol {
+        list-style: none;
+        counter-reset: custom-step;
+        margin: 12px 0;
+        padding-left: 0;
+      }
+
+      .markdown-content ol li {
+        counter-increment: custom-step;
+        position: relative;
+        padding-left: 36px;
+        margin-bottom: 14px;
+      }
+
+      .markdown-content ol li::before {
+        content: counter(custom-step);
+        position: absolute;
+        left: 0;
+        top: 1px;
+        width: 22px;
+        height: 22px;
+        background: #1e293b;
+        color: #ffffff;
+        border-radius: 50%;
+        font-size: 11px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .answer-callout {
+        background-color: var(--light-green-bg);
+        color: var(--dark-green-text);
+        padding: 13px 18px;
+        border-radius: 12px;
+        font-size: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 16px 0;
+      }
+
+      .answer-callout .ans-label {
+        font-weight: 600;
+      }
+
+      .answer-callout .ans-val {
+        font-weight: 700;
+      }
+
+      .tablet-footer {
+        background: #ffffff;
+        border-top: 1px solid var(--border-subtle);
+        padding: 9px 24px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 11px;
+        color: var(--text-muted);
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="controls-bar">
+      <div class="file-input-wrapper">
+        <label for="csvFileInput" class="btn-action">📂 Load CSV File</label>
+        <input type="file" id="csvFileInput" accept=".csv" />
+      </div>
+      <button id="prevBtn" class="nav-btn" title="Previous Question (Left Arrow)">◀</button>
+      <div id="counter" class="counter-display">0 / 0</div>
+      <button id="nextBtn" class="nav-btn" title="Next Question (Right Arrow)">▶</button>
+    </div>
+
+    <div class="tablet-device">
+      <div class="tablet-screen">
+        <header class="tablet-header">
+          <div class="brand-section">
+            <div class="brand-icon">B</div>
+            <div class="brand-title">Dreambridge</div>
+          </div>
+          <div class="streak-badge"><span>🔥</span> 120</div>
+        </header>
+
+        <main class="tablet-workspace">
+          <section class="left-panel">
+            <div class="badges-row">
+              <span class="tag" id="subjectTag">SUBJECT</span>
+              <span class="tag tag-orange" id="typeTag">TYPE</span>
+            </div>
+            <div class="question-card" id="questionText">Please load your CSV file.</div>
+            <div class="options-title">Choices</div>
+            <div class="options-container" id="optionsContainer"></div>
+          </section>
+
+          <section class="right-panel">
+            <div class="solution-header">
+              <span class="solution-title">Solution Breakdown</span>
+              <div class="action-icons">
+                <button class="icon-btn" onclick="copyMarkdown()">📋 Copy</button>
+              </div>
+            </div>
+            <div class="markdown-content" id="markdownExplanation"></div>
+          </section>
+        </main>
+
+        <footer class="tablet-footer">
+          <span style="font-weight: 700; color: #475569;">Superteacher</span>
+          <span>Superteacher can make mistakes. Always cross-check.</span>
+        </footer>
+      </div>
+    </div>
+
+    <script>
+      let questions = [];
+      let currentIndex = 0;
+
+      const fileInput = document.getElementById("csvFileInput");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+      const counter = document.getElementById("counter");
+      const questionText = document.getElementById("questionText");
+      const subjectTag = document.getElementById("subjectTag");
+      const typeTag = document.getElementById("typeTag");
+      const optionsContainer = document.getElementById("optionsContainer");
+      const markdownExplanation = document.getElementById("markdownExplanation");
+
+      // KaTeX compiler
+      function compileLatex(raw, isDisplay) {
+        if (!raw) return "";
+        const clean = raw.trim();   // do NOT collapse \\ : it is the matrix row separator
+        try {
+          return katex.renderToString(clean, { displayMode: isDisplay, throwOnError: false });
+        } catch (err) {
+          return raw;
+        }
+      }
+
+      // Solution markdown renderer
+      // Every math span is matched ONCE in a single left-to-right pass, so a
+      // token can never end up inside another delimiter (the cause of XZKTOKEN leaks).
+      function renderSolutionMarkdown(raw) {
+        if (!raw || typeof raw !== "string") return "";
+
+        const tokenMap = {};
+        let tokenCount = 0;
+        const createToken = (html) => {
+          const id = `XZKTOKEN${tokenCount++}KZX`;
+          tokenMap[id] = html;
+          return id;
+        };
+
+        let text = raw;
+
+        // 1. Answer block first
+        const answerRegex = /(?:##\s*Answer|\*\*Answer:?\*\*)\s*([^\n\r]+)/i;
+        const ansMatch = text.match(answerRegex);
+        if (ansMatch) {
+          let ansContent = ansMatch[1].trim();
+          ansContent = ansContent.replace(/\*\*Answer:?\*\*/gi, "").trim();
+          ansContent = ansContent
+            .replace(/\\\(([\s\S]+?)\\\)/g, (_, m) => compileLatex(m, false))
+            .replace(/\$([^\$\n\r]+?)\$/g, (_, m) => compileLatex(m, false));
+
+          const calloutHtml = `
+<div class="answer-callout">
+  <span class="ans-label">Answer</span>
+  <span class="ans-val">${ansContent}</span>
+</div>`;
+          text = text.replace(answerRegex, `\n\n${createToken(calloutHtml)}\n\n`);
+        }
+
+        // 2. All math in one pass (order matters: display forms before inline)
+        //    groups: 1 = $$..$$, 2 = \[..\], 3 = \begin{env} name, 4 = \(..\), 5 = $..$
+        //    \left| ... \right| has no group; it is handled as the fallback.
+        const mathRe = /\$\$([\s\S]+?)\$\$|\\\[([\s\S]+?)\\\]|\\begin\{([a-zA-Z*]+)\}[\s\S]+?\\end\{\3\}|\\\(([\s\S]+?)\\\)|\$([^\$\n\r]+?)\$|\\left\|[\s\S]*?\\right\|/g;
+
+        text = text.replace(mathRe, (m, dd, br, env, paren, dollar) => {
+          if (dd !== undefined) return createToken(compileLatex(dd, true));
+          if (br !== undefined) return createToken(compileLatex(br, true));
+          if (env !== undefined) return createToken(compileLatex(m, true));
+          if (paren !== undefined) return createToken(compileLatex(paren, false));
+          if (dollar !== undefined) return createToken(compileLatex(dollar, false));
+          return createToken(compileLatex(m, true)); // \left| ... \right|
+        });
+
+        // 3. Headings -> bold labels
+        text = text.replace(/^##\s*(Concept|Formula|Steps|Key setup|Note|Derivation)/gim, "**$1**");
+
+        // 4. Markdown
+        let html = marked.parse(text);
+
+        // 5. Restore tokens
+        Object.keys(tokenMap).forEach((id) => {
+          html = html.split(id).join(tokenMap[id]);
+        });
+
+        // 6. Wrap Formula / Key setup in lavender boxes
+        html = html.replace(
+          /(<p><strong>(Formula|Key setup)<\/strong><\/p>\s*<p>)([\s\S]*?)(<\/p>)/gi,
+          (match, p1, label, content) =>
+            `<div class="section-title">${label}</div><div class="formula-callout">${content}</div>`
+        );
+
+        return html;
+      }
+
+      // Math inside the question card
+      function renderQuestionHtml(text) {
+        if (!text) return "";
+        const mathRe =
+          /\$\$([\s\S]+?)\$\$|\\\[([\s\S]+?)\\\]|\\\(([\s\S]+?)\\\)|\$([^$]+?)\$|(\\left\|[\s\S]*?\\right\|)/g;
+
+        return text.replace(mathRe, (m, dd, br, paren, dollar, bare) => {
+          if (dd !== undefined) return compileLatex(dd, true);
+          if (br !== undefined) return compileLatex(br, true);
+          if (paren !== undefined) return compileLatex(paren, false);
+          if (dollar !== undefined) {
+            // Matrices and other environments need display mode to render properly
+            const isDisplay = /\\begin\{/.test(dollar) || /\\left\|/.test(dollar);
+            return compileLatex(dollar, isDisplay);
+          }
+          return compileLatex(bare, true);  // bare \left| ... \right| with no $ delimiters
+        });
+      }
+
+      function renderOptionMath(text) {
+        if (!text || typeof text !== "string") return "";
+        let t = text.trim();
+        if (t.startsWith("$") && t.endsWith("$")) {
+          return compileLatex(t.slice(1, -1), false);
+        }
+        return renderQuestionHtml(t);
+      }
+
+      function safeJsonParse(str) {
+        if (!str || typeof str !== "string") return null;
+        try {
+          return JSON.parse(str);
+        } catch (e1) {
+          try {
+            const sanitized = str.replace(/\\([^"\\\/bfnrtu])/g, "\\\\$1");
+            return JSON.parse(sanitized);
+          } catch (e2) {
+            return null;
+          }
+        }
+      }
+
+      window.addEventListener("DOMContentLoaded", () => {
+        fetch("Data/top_5_explanations.csv")
+          .then(res => {
+            if (!res.ok) throw new Error();
+            return res.text();
+          })
+          .then(csvText => parseCSV(csvText))
+          .catch(() => { });
+      });
+
+      fileInput.addEventListener("change", (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = (evt) => parseCSV(evt.target.result);
+        reader.readAsText(file);
+      });
+
+      function parseCSV(text) {
+        Papa.parse(text, {
+          header: true,
+          skipEmptyLines: true,
+          complete: (results) => {
+            questions = results.data.filter(q => q.question || q.english);
+            currentIndex = 0;
+            renderView();
+          }
+        });
+      }
+
+      function renderOptions(q) {
+        optionsContainer.innerHTML = "";
+        let optionsList = [];
+        const correctDisplayId = (q.correct_display_id || "").trim();
+
+        if (q.options && q.options.trim() !== "") {
+          const parsed = safeJsonParse(q.options);
+          if (parsed) optionsList = parsed.english || parsed.hindi || [];
+        }
+
+        let correctOptionIds = [];
+        if (q.correct_options && q.correct_options.trim() !== "") {
+          const parsedCorr = safeJsonParse(q.correct_options);
+          if (Array.isArray(parsedCorr)) correctOptionIds = parsedCorr.map(String);
+        }
+
+        if (optionsList.length > 0) {
+          optionsList.forEach((opt) => {
+            const isCorrect =
+              (correctDisplayId && opt.displayId === correctDisplayId) ||
+              (opt.id && correctOptionIds.includes(String(opt.id)));
+            const div = document.createElement("div");
+            div.className = `option-item ${isCorrect ? "correct" : ""}`;
+            div.innerHTML = `
+        <div class="option-key">${opt.displayId || ""}</div>
+        <div class="option-text">${renderOptionMath(opt.text || "")}</div>
+        ${isCorrect ? '<span class="correct-badge">✓ Correct</span>' : ""}
+      `;
+            optionsContainer.appendChild(div);
+          });
+          return;
+        }
+
+        // Fallback when no options array
+        const qType = (q.type || "").toLowerCase();
+        const div = document.createElement("div");
+        div.className = "option-item correct";
+        if (qType.includes("integer") || !correctDisplayId) {
+          div.innerHTML = `
+      <div class="option-key">#</div>
+      <div class="option-text">Correct Value: <strong>${renderOptionMath(q.correct_answer || "N/A")}</strong></div>
+      <span class="correct-badge">Correct Answer</span>
+    `;
+        } else {
+          div.innerHTML = `
+      <div class="option-key">${correctDisplayId}</div>
+      <div class="option-text">${renderOptionMath(q.correct_answer || "Correct Option")}</div>
+      <span class="correct-badge">✓ Correct</span>
+    `;
+        }
+        optionsContainer.appendChild(div);
+      }
+
+      function renderView() {
+        if (!questions.length) {
+          counter.textContent = "0 / 0";
+          prevBtn.disabled = true;
+          nextBtn.disabled = true;
+          return;
+        }
+
+        counter.textContent = `${currentIndex + 1} / ${questions.length}`;
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex === questions.length - 1;
+
+        const q = questions[currentIndex];
+
+        questionText.innerHTML = renderQuestionHtml(q.english || "No Question Text");
+        subjectTag.textContent = (q.subject || "JEE").toUpperCase();
+        typeTag.textContent = (q.type || "MCQ").toUpperCase();
+
+        renderOptions(q);
+
+        markdownExplanation.innerHTML = renderSolutionMarkdown(q.explanation_markdown || "");
+      }
+
+      prevBtn.addEventListener("click", () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          renderView();
+        }
+      });
+      nextBtn.addEventListener("click", () => {
+        if (currentIndex < questions.length - 1) {
+          currentIndex++;
+          renderView();
+        }
+      });
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") prevBtn.click();
+        if (e.key === "ArrowRight") nextBtn.click();
+      });
+
+      function copyMarkdown() {
+        if (!questions.length) return;
+        const text = questions[currentIndex].explanation_markdown || "";
+        navigator.clipboard.writeText(text);
+        alert("Markdown solution copied to clipboard!");
+      }
+    </script>
+  </body>
+
+  </html>
+
+  <script>
+
+  </script>
+</body>
+
+</html>

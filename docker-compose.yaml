@@ -1,0 +1,18 @@
+services:
+  qa-generation-service:
+    container_name: qa-generation-service
+    build: . 
+    network_mode: "host"
+    volumes:
+      - ./:/app
+      # env_file:
+      #   - .env
+    environment:
+      PYTHONDONTWRITEBYTECODE: 1
+    ipc: host
+    ulimits:
+      memlock: -1
+      stack: 67108864
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
