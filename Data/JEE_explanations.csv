@@ -1,0 +1,266 @@
+id,source_question_id,exam_group,goal,subject,chapter,topic,year,paper_key,paper_title,difficulty,has_image,type,question,hindi,english,options,correct_options,answer,explanation,scoring,taxonomy_enrichment,status,tags,reviewed_by,reviewed_at,rejection_reason,created_at,updated_at,correct_display_id,correct_answer,explanation_markdown
+1jVJCgGA1acmjX,347577540,jee,jee_main,mathematics,dummy,,2025,2025-04-03_morning_domestic,JEE Main 2025 (Online) 3 April Morning Shift,,FALSE,mcq,"{""hindi"": ""माना बिंदु $(4,1,0)$ से होकर जाने वाली एक रेखा, रेखा $\\mathrm{L}_{1}: \\frac{x-1}{2}=\\frac{y-2}{3}=\\frac{z-3}{4}$ को बिंदु $A(\\alpha, \\beta, \\gamma)$ और रेखा $\\mathrm{L}_{2}: x-6=y=-z+4$ को बिंदु $B(a, b, c)$ पर काटती है। तो $\\left|\\begin{array}{lll}1 & 0 & 1 \\\\ \\alpha & \\beta & \\gamma \\\\ a & b & c\\end{array}\\right|$ बराबर है"", ""english"": ""Let a line passing through the point $(4,1,0)$ intersect the line $\\mathrm{L}_{1}: \\frac{x-1}{2}=\\frac{y-2}{3}=\\frac{z-3}{4}$ at the point $A(\\alpha, \\beta, \\gamma)$ and the line $\\mathrm{L}_{2}: x-6=y=-z+4$ at the point $B(a, b, c)$. Then $\\left|\\begin{array}{lll}1 & 0 & 1 \\\\ \\alpha & \\beta & \\gamma \\\\ a & b & c\\end{array}\\right|$ is equal to""}","माना बिंदु $(4,1,0)$ से होकर जाने वाली एक रेखा, रेखा $\mathrm{L}_{1}: \frac{x-1}{2}=\frac{y-2}{3}=\frac{z-3}{4}$ को बिंदु $A(\alpha, \beta, \gamma)$ और रेखा $\mathrm{L}_{2}: x-6=y=-z+4$ को बिंदु $B(a, b, c)$ पर काटती है। तो $\left|\begin{array}{lll}1 & 0 & 1 \\ \alpha & \beta & \gamma \\ a & b & c\end{array}\right|$ बराबर है","Let a line passing through the point $(4,1,0)$ intersect the line $\mathrm{L}_{1}: \frac{x-1}{2}=\frac{y-2}{3}=\frac{z-3}{4}$ at the point $A(\alpha, \beta, \gamma)$ and the line $\mathrm{L}_{2}: x-6=y=-z+4$ at the point $B(a, b, c)$. Then $\left|\begin{array}{lll}1 & 0 & 1 \\ \alpha & \beta & \gamma \\ a & b & c\end{array}\right|$ is equal to","{""hindi"": [{""id"": ""3475771842"", ""text"": ""8"", ""displayId"": ""A""}, {""id"": ""3475771843"", ""text"": ""6"", ""displayId"": ""B""}, {""id"": ""3475771844"", ""text"": ""12"", ""displayId"": ""C""}, {""id"": ""3475771845"", ""text"": ""16"", ""displayId"": ""D""}], ""english"": [{""id"": ""3475771842"", ""text"": ""8"", ""displayId"": ""A""}, {""id"": ""3475771843"", ""text"": ""6"", ""displayId"": ""B""}, {""id"": ""3475771844"", ""text"": ""12"", ""displayId"": ""C""}, {""id"": ""3475771845"", ""text"": ""16"", ""displayId"": ""D""}]}","[""3475771842""]","{""hindi"": """", ""english"": """"}","{""hindi"": """", ""english"": """"}","{""isMandatory"": false, ""correctMarks"": 4, ""incorrectMarks"": -1}",,approved,,,0,,1785668310,1785993295,A,8,"## Concept
+
+Since the line passes through $P(4,1,0)$ and intersects $L_1$ at $A$ and $L_2$ at $B$, the points $P$, $A$, and $B$ are collinear.
+
+## Formula
+
+For collinear points $P, A, B$, the direction ratios of $\vec{PA}$ and $\vec{PB}$ are proportional:
+$$\frac{x_A - x_P}{x_B - x_P} = \frac{y_A - y_P}{y_B - y_P} = \frac{z_A - z_P}{z_B - z_P}$$
+
+## Steps
+
+1. Let general points on $L_1$ and $L_2$ be $A(2\lambda+1, 3\lambda+2, 4\lambda+3)$ and $B(\mu+6, \mu, -\mu+4)$.
+2. Equate the direction ratios of $\vec{PA} = (2\lambda-3, 3\lambda+1, 4\lambda+3)$ and $\vec{PB} = (\mu+2, \mu-1, -\mu+4)$:
+   $$\frac{2\lambda-3}{\mu+2} = \frac{3\lambda+1}{\mu-1} = \frac{4\lambda+3}{4-\mu} \implies \lambda = -1, \, \mu = 3$$
+3. Find the coordinates of $A$ and $B$:
+   $$A(\alpha, \beta, \gamma) = (-1, -1, -1), \quad B(a, b, c) = (9, 3, 1)$$
+4. Evaluate the determinant:
+   $$\left|\begin{array}{ccc}1 & 0 & 1 \\ -1 & -1 & -1 \\ 9 & 3 & 1\end{array}\right| = 1(-1 + 3) + 1(-3 + 9) = 8$$
+
+## Answer
+
+**Answer:** 8 → (A)
+
+## Note
+
+Check for extraneous roots when solving cross-multiplied collinearity equations that might involve $0/0$."
+1jQOyyinCy7W2P,34757777,jee,jee_main,mathematics,dummy,,2025,2025-04-03_evening_domestic,JEE Main 2025 (Online) 3 April Evening Shift,,FALSE,mcq,"{""hindi"": ""यदि फलन $f(x)=\\log _{7}\\left(1-\\log _{4}\\left(x^{2}-9 x+18\\right)\\right)$ का प्रांत $(\\alpha, \\beta) \\mathrm{U}(\\gamma, \\delta)$ है, तो $\\alpha+\\beta+\\gamma+\\hat{o}$ बराबर है:"", ""english"": ""If the domain of the function $f(x)=\\log _{7}\\left(1-\\log _{4}\\left(x^{2}-9 x+18\\right)\\right)$ is $(\\alpha, \\beta) \\cup(\\gamma, \\delta)$, then $\\alpha+\\beta+\\gamma+\\delta$ is equal to""}","यदि फलन $f(x)=\log _{7}\left(1-\log _{4}\left(x^{2}-9 x+18\right)\right)$ का प्रांत $(\alpha, \beta) \mathrm{U}(\gamma, \delta)$ है, तो $\alpha+\beta+\gamma+\hat{o}$ बराबर है:","If the domain of the function $f(x)=\log _{7}\left(1-\log _{4}\left(x^{2}-9 x+18\right)\right)$ is $(\alpha, \beta) \cup(\gamma, \delta)$, then $\alpha+\beta+\gamma+\delta$ is equal to","{""hindi"": [{""id"": ""347577260"", ""text"": ""15"", ""displayId"": ""A""}, {""id"": ""347577261"", ""text"": ""16"", ""displayId"": ""B""}, {""id"": ""347577262"", ""text"": ""17"", ""displayId"": ""C""}, {""id"": ""347577263"", ""text"": ""18"", ""displayId"": ""D""}], ""english"": [{""id"": ""347577260"", ""text"": ""15"", ""displayId"": ""A""}, {""id"": ""347577261"", ""text"": ""16"", ""displayId"": ""B""}, {""id"": ""347577262"", ""text"": ""17"", ""displayId"": ""C""}, {""id"": ""347577263"", ""text"": ""18"", ""displayId"": ""D""}]}","[""347577263""]","{""hindi"": """", ""english"": """"}","{""hindi"": """", ""english"": """"}","{""isMandatory"": false, ""correctMarks"": 4, ""incorrectMarks"": -1}",,approved,,,0,,1785668031,1785991530,D,18,"## Concept
+
+For a logarithmic function $\log_a(g(x))$ to be defined when $a > 1$, its argument must be strictly positive: $g(x) > 0$.
+
+## Formula
+
+$$\log_b(u) < c \iff 0 < u < b^c \quad (\text{for } b > 1)$$
+
+## Steps
+
+1. Set the argument of the inner logarithm to be positive: $x^2 - 9x + 18 > 0 \implies x \in (-\infty, 3) \cup (6, \infty)$
+2. Set the argument of the outer logarithm to be positive: $1 - \log_4(x^2 - 9x + 18) > 0 \implies \log_4(x^2 - 9x + 18) < 1$
+3. Solve for $x$: $x^2 - 9x + 18 < 4 \implies x^2 - 9x + 14 < 0 \implies x \in (2, 7)$
+4. Intersect both conditions to find the domain: $x \in (2, 3) \cup (6, 7)$, giving $\alpha = 2, \beta = 3, \gamma = 6, \delta = 7$
+5. Compute the required sum: $\alpha + \beta + \gamma + \delta = 2 + 3 + 6 + 7 = 18$
+
+## Answer
+
+**Answer:** 18 → (D)
+
+## Note
+
+Do not forget the condition for the innermost logarithm ($x^2 - 9x + 18 > 0$) along with the outer one."
+1jQOyyjHEuaQEN,34757778,jee,jee_main,mathematics,dummy,,2025,2025-04-03_evening_domestic,JEE Main 2025 (Online) 3 April Evening Shift,,FALSE,mcq,"{""hindi"": ""माना एक फलन $f$ के लिए $f(x)+3 f\\left(\\frac{24}{x}\\right)=4 x, x \\neq 0$ है। तो $f(3)+f(8)$ बराबर है"", ""english"": ""Let $f$ be a function such that $f(x)+3 f\\left(\\frac{24}{x}\\right)=4 x, x \\neq 0$. Then $f(3)+f(8)$ is equal to""}","माना एक फलन $f$ के लिए $f(x)+3 f\left(\frac{24}{x}\right)=4 x, x \neq 0$ है। तो $f(3)+f(8)$ बराबर है","Let $f$ be a function such that $f(x)+3 f\left(\frac{24}{x}\right)=4 x, x \neq 0$. Then $f(3)+f(8)$ is equal to","{""hindi"": [{""id"": ""347577264"", ""text"": ""10"", ""displayId"": ""A""}, {""id"": ""347577265"", ""text"": ""11"", ""displayId"": ""B""}, {""id"": ""347577266"", ""text"": ""12"", ""displayId"": ""C""}, {""id"": ""347577267"", ""text"": ""13"", ""displayId"": ""D""}], ""english"": [{""id"": ""347577264"", ""text"": ""10"", ""displayId"": ""A""}, {""id"": ""347577265"", ""text"": ""11"", ""displayId"": ""B""}, {""id"": ""347577266"", ""text"": ""12"", ""displayId"": ""C""}, {""id"": ""347577267"", ""text"": ""13"", ""displayId"": ""D""}]}","[""347577265""]","{""hindi"": """", ""english"": """"}","{""hindi"": """", ""english"": """"}","{""isMandatory"": false, ""correctMarks"": 4, ""incorrectMarks"": -1}",,approved,,,0,,1785668031,1785991547,B,11,"## Concept
+
+Substitute specific values into the functional equation to form a system of linear equations in $f(3)$ and $f(8)$.
+
+## Steps
+
+1. Substitute $x = 3$ into the given equation:
+   $$f(3) + 3f(8) = 4(3) = 12 \quad \text{--- (1)}$$
+
+2. Substitute $x = 8$ into the given equation:
+   $$f(8) + 3f(3) = 4(8) = 32 \quad \text{--- (2)}$$
+
+3. Add equations (1) and (2):
+   $$4f(3) + 4f(8) = 44$$
+
+4. Divide by $4$ to find the required sum:
+   $$f(3) + f(8) = 11$$
+
+## Answer
+
+**Answer:** 11 → (Option B)
+
+## Note
+
+Adding symmetric pairs directly avoids solving for the individual values of $f(3)$ and $f(8)$."
+1jVJCgGqMi700v,347577542,jee,jee_main,mathematics,dummy,,2025,2025-04-03_morning_domestic,JEE Main 2025 (Online) 3 April Morning Shift,,FALSE,mcq,"{""hindi"": ""माना $f(x)= \\begin{cases}(1+a x)^{1 / x}, & x<0 \\\\ 1+b, & x=0 \\\\ \\frac{(x+4)^{1 / 2}-2}{(x+c)^{1 / 3}-2}, & x>0\\end{cases}$\n\n$x=0$ पर संतत है। तो $e^{a} b c$ बराबर है"", ""english"": ""Let $f(x)=\\left\\{\\begin{array}{l}(1+a x)^{1 / x} \\quad, x<0 \\\\ 1+b \\quad, x=0 \\\\ \\frac{(x+4)^{1 / 2}-2}{(x+c)^{1 / 3}-2}, x>0\\end{array}\\right.$\n\nbe continuous at $x=0$. Then $e^{a} b c$ is equal to:""}","माना $f(x)= \begin{cases}(1+a x)^{1 / x}, & x<0 \\ 1+b, & x=0 \\ \frac{(x+4)^{1 / 2}-2}{(x+c)^{1 / 3}-2}, & x>0\end{cases}$
+
+$x=0$ पर संतत है। तो $e^{a} b c$ बराबर है","Let $f(x)=\left\{\begin{array}{l}(1+a x)^{1 / x} \quad, x<0 \\ 1+b \quad, x=0 \\ \frac{(x+4)^{1 / 2}-2}{(x+c)^{1 / 3}-2}, x>0\end{array}\right.$
+
+be continuous at $x=0$. Then $e^{a} b c$ is equal to:","{""hindi"": [{""id"": ""3475771850"", ""text"": ""48"", ""displayId"": ""A""}, {""id"": ""3475771851"", ""text"": ""64"", ""displayId"": ""B""}, {""id"": ""3475771852"", ""text"": ""72"", ""displayId"": ""C""}, {""id"": ""3475771853"", ""text"": ""36"", ""displayId"": ""D""}], ""english"": [{""id"": ""3475771850"", ""text"": ""48"", ""displayId"": ""A""}, {""id"": ""3475771851"", ""text"": ""64"", ""displayId"": ""B""}, {""id"": ""3475771852"", ""text"": ""72"", ""displayId"": ""C""}, {""id"": ""3475771853"", ""text"": ""36"", ""displayId"": ""D""}]}","[""3475771850""]","{""hindi"": """", ""english"": """"}","{""hindi"": """", ""english"": """"}","{""isMandatory"": false, ""correctMarks"": 4, ""incorrectMarks"": -1}",,approved,,,0,,1785668310,1785993512,A,48,"## Concept
+
+A function is continuous at $x = 0$ if the left-hand limit, the value at $x=0$, and the right-hand limit are all equal: $\lim_{x \to 0^-} f(x) = f(0) = \lim_{x \to 0^+} f(x)$.
+
+## Formula
+
+$$\lim_{x \to 0} (1+ax)^{1/x} = e^a$$
+
+## Steps
+
+1. Find the left-hand limit at $x = 0$:
+   $$\text{LHL} = \lim_{x \to 0^-} (1+ax)^{1/x} = e^a$$
+
+2. For the right-hand limit to exist, the denominator must approach $0$ as $x \to 0^+$:
+   $$c^{1/3} - 2 = 0 \implies c = 8$$
+
+3. Evaluate the right-hand limit using L'Hôpital's Rule:
+   $$\text{RHL} = \lim_{x \to 0^+} \frac{\frac{1}{2\sqrt{x+4}}}{\frac{1}{3(x+8)^{2/3}}} = \frac{\frac{1}{4}}{\frac{1}{12}} = 3$$
+
+4. Equate limits with $f(0) = 1+b$:
+   $$e^a = 1+b = 3 \implies e^a = 3 \text{ and } b = 2$$
+
+5. Compute the required product:
+   $$e^a b c = 3 \times 2 \times 8 = 48$$
+
+## Answer
+
+**Answer:** 48 → (A)
+
+## Note
+
+Indeterminate forms of type $0/0$ require denominator vanishing, giving $c=8$ directly before applying L'Hôpital's rule."
+1jVJCgHoBj0GZ0,347577545,jee,jee_main,mathematics,dummy,,2025,2025-04-03_morning_domestic,JEE Main 2025 (Online) 3 April Morning Shift,,FALSE,mcq,"{""hindi"": ""माना एक अवकलनीय फलन $g$ के लिए $\\int_{0}^{x} g(t) d t=x-\\int_{0}^{x} t g(t) d t, x \\geq 0$ है और माना $y=y(x)$, अवकल समीकरण $\\frac{d y}{d x}-y \\tan x=2(x+1) \\sec x g(x), x \\in\\left[0, \\frac{\\pi}{2}\\right)$ को संतुष्ट करता है। यदि $y(0)=0$ है, तो $y\\left(\\frac{\\pi}{3}\\right)$ बराबर है"", ""english"": ""Let $g$ be a differentiable function such that $\\int_{0}^{x} g(t) d t=x-\\int_{0}^{x} t g(t) d t, x \\geq 0$ and let $y=y(x)$ satisfy the differential equation $\\frac{d y}{d x}-y \\tan x=2(x+1) \\sec x g(x), x \\in\\left[0, \\frac{\\pi}{2}\\right)$. If $y(0)=0$, then $y\\left(\\frac{\\pi}{3}\\right)$ is equal to""}","माना एक अवकलनीय फलन $g$ के लिए $\int_{0}^{x} g(t) d t=x-\int_{0}^{x} t g(t) d t, x \geq 0$ है और माना $y=y(x)$, अवकल समीकरण $\frac{d y}{d x}-y \tan x=2(x+1) \sec x g(x), x \in\left[0, \frac{\pi}{2}\right)$ को संतुष्ट करता है। यदि $y(0)=0$ है, तो $y\left(\frac{\pi}{3}\right)$ बराबर है","Let $g$ be a differentiable function such that $\int_{0}^{x} g(t) d t=x-\int_{0}^{x} t g(t) d t, x \geq 0$ and let $y=y(x)$ satisfy the differential equation $\frac{d y}{d x}-y \tan x=2(x+1) \sec x g(x), x \in\left[0, \frac{\pi}{2}\right)$. If $y(0)=0$, then $y\left(\frac{\pi}{3}\right)$ is equal to","{""hindi"": [{""id"": ""3475771862"", ""text"": ""$\\frac{4 \\pi}{3}$"", ""displayId"": ""A""}, {""id"": ""3475771863"", ""text"": ""$\\frac{2 \\pi}{3}$"", ""displayId"": ""B""}, {""id"": ""3475771864"", ""text"": ""$\\frac{2 \\pi}{3 \\sqrt{3}}$"", ""displayId"": ""C""}, {""id"": ""3475771865"", ""text"": ""$\\frac{4 \\pi}{3 \\sqrt{3}}$"", ""displayId"": ""D""}], ""english"": [{""id"": ""3475771862"", ""text"": ""$\\frac{4 \\pi}{3}$"", ""displayId"": ""A""}, {""id"": ""3475771863"", ""text"": ""$\\frac{2 \\pi}{3}$"", ""displayId"": ""B""}, {""id"": ""3475771864"", ""text"": ""$\\frac{2 \\pi}{3 \\sqrt{3}}$"", ""displayId"": ""C""}, {""id"": ""3475771865"", ""text"": ""$\\frac{4 \\pi}{3 \\sqrt{3}}$"", ""displayId"": ""D""}]}","[""3475771862""]","{""hindi"": """", ""english"": """"}","{""hindi"": """", ""english"": """"}","{""isMandatory"": false, ""correctMarks"": 4, ""incorrectMarks"": -1}",,approved,,,0,,1785668310,1785993558,A,$\frac{4 \pi}{3}$,"## Concept
+
+Differentiate the integral equation to find $g(x)$, then solve the resulting first-order linear differential equation.
+
+## Formula
+
+$$\frac{d}{dx}\left(\int_0^x f(t)\,dt\right) = f(x)$$
+$$\text{For }\frac{dy}{dx} + P(x)y = Q(x),\quad \text{I.F.} = e^{\int P(x)\,dx}$$
+
+## Steps
+
+1. Differentiate the given integral equation:
+   $$g(x) = 1 - x g(x) \implies g(x) = \frac{1}{x+1}$$
+
+2. Substitute $g(x)$ into the differential equation:
+   $$\frac{dy}{dx} - y\tan x = 2\sec x$$
+
+3. Find the integrating factor and solve for $y(x)$:
+   $$\text{I.F.} = e^{\int -\tan x\,dx} = \cos x \implies y\cos x = \int 2\,dx = 2x + C$$
+
+4. Apply $y(0) = 0$ to get $C = 0$, giving $y(x) = 2x\sec x$.
+
+5. Calculate $y\left(\frac{\pi}{3}\right)$:
+   $$y\left(\frac{\pi}{3}\right) = 2\left(\frac{\pi}{3}\right)\sec\left(\frac{\pi}{3}\right) = \frac{2\pi}{3} \times 2 = \frac{4\pi}{3}$$
+
+## Answer
+
+**Answer:** $\frac{4\pi}{3}$ → (A)
+
+## Note
+
+Remember $\int -\tan x\,dx = \ln|\cos x|$, which simplifies the integrating factor directly to $\cos x$."
+1jQOyykCPcJNFu,34757780,jee,jee_main,mathematics,dummy,,2025,2025-04-03_evening_domestic,JEE Main 2025 (Online) 3 April Evening Shift,,FALSE,mcq,"{""hindi"": ""माना एक समबाहु त्रिभुज के शीर्ष $z_{1}, z_{2}, z_{3} \\in \\mathbb{C}$ हैं। यदि इसका केन्द्रक $z_{0}$ है, तो $\\sum_{k=1}^{3}\\left(z_{k}-z_{0}\\right)^{2}$ बराबर है"", ""english"": ""If $z_{1}, z_{2}, z_{3} \\in \\mathbb{C}$ are the vertices of an equilateral triangle, whose centroid is $z_{0}$, then $\\sum_{k=1}^{3}\\left(z_{k}-z_{0}\\right)^{2}$ is equal to""}","माना एक समबाहु त्रिभुज के शीर्ष $z_{1}, z_{2}, z_{3} \in \mathbb{C}$ हैं। यदि इसका केन्द्रक $z_{0}$ है, तो $\sum_{k=1}^{3}\left(z_{k}-z_{0}\right)^{2}$ बराबर है","If $z_{1}, z_{2}, z_{3} \in \mathbb{C}$ are the vertices of an equilateral triangle, whose centroid is $z_{0}$, then $\sum_{k=1}^{3}\left(z_{k}-z_{0}\right)^{2}$ is equal to","{""hindi"": [{""id"": ""347577272"", ""text"": ""1"", ""displayId"": ""A""}, {""id"": ""347577273"", ""text"": ""0"", ""displayId"": ""B""}, {""id"": ""347577274"", ""text"": ""i"", ""displayId"": ""C""}, {""id"": ""347577275"", ""text"": ""-i"", ""displayId"": ""D""}], ""english"": [{""id"": ""347577272"", ""text"": ""1"", ""displayId"": ""A""}, {""id"": ""347577273"", ""text"": ""0"", ""displayId"": ""B""}, {""id"": ""347577274"", ""text"": ""i"", ""displayId"": ""C""}, {""id"": ""347577275"", ""text"": ""-i"", ""displayId"": ""D""}]}","[""347577273""]","{""hindi"": """", ""english"": """"}","{""hindi"": """", ""english"": """"}","{""isMandatory"": false, ""correctMarks"": 4, ""incorrectMarks"": -1}",,approved,,,0,,1785668031,1785991646,B,0,"## Concept
+
+Translating the centroid of an equilateral triangle to the origin allows vertices to be represented using cube roots of unity.
+
+## Formula
+
+$$1 + \omega + \omega^2 = 0 \quad (\text{where } \omega = e^{i 2\pi/3})$$
+$$\sum_{k=1}^3 (z_k - z_0)^2 = \sum_{k=1}^3 w_k^2 \quad (\text{where } w_k = z_k - z_0)$$
+
+## Steps
+
+1. Shift the centroid to the origin by defining $w_k = z_k - z_0$, so that $w_1, w_2, w_3$ form an equilateral triangle centered at $0$.
+2. Express the vertices in polar form: $w_1 = R e^{i\theta}$, $w_2 = w_1\omega$, and $w_3 = w_1\omega^2$.
+3. Expand the required sum: $\sum_{k=1}^{3} w_k^2 = w_1^2 + (w_1\omega)^2 + (w_1\omega^2)^2 = w_1^2(1 + \omega^2 + \omega^4)$.
+4. Use the property $\omega^4 = \omega$ and $1 + \omega + \omega^2 = 0$ to get: $w_1^2(0) = 0$.
+
+## Answer
+**Answer:** 0 → (B)
+
+## Note
+For any regular $n$-gon centered at the origin, $\sum_{k=1}^n w_k^m = 0$ whenever $m$ is not a multiple of $n$."
+1jQOyyl6epVSAT,34757782,jee,jee_main,mathematics,dummy,,2025,2025-04-03_evening_domestic,JEE Main 2025 (Online) 3 April Evening Shift,,FALSE,mcq,"{""hindi"": ""प्रवणता 2 की रेखा $\\mathrm{L}_{1}$ और प्रवणता $\\frac{1}{2}$ की रेखा $\\mathrm{L}_{2}$ मूलबिंदु O पर प्रतिच्छेद करती हैं। प्रथम चतुर्थांश में, रेखा $\\mathrm{L}_{1}$ पर 12 बिंदु $\\mathrm{P}_{1}, \\mathrm{P}_{2}, \\ldots, \\mathrm{P}_{12}$, हैं और रेखा $\\mathrm{L}_{2}$ पर 9 बिंदु $\\mathrm{Q}_{1}, \\mathrm{Q}_{2}, \\ldots, \\mathrm{Q}_{9}$, हैं। तो 22 बिंदुओं $\\mathrm{O}, \\mathrm{P}_{1}$, $\\mathrm{P}_{2}, \\ldots, \\mathrm{P}_{12}, \\mathrm{Q}_{1}, \\mathrm{Q}_{2}, \\ldots, \\mathrm{Q}_{9}$, में से तीन को शीर्ष लेकर बनाए जा सकने वाले त्रिभुजों की कुल संख्या है:"", ""english"": ""Line $\\mathrm{L}_{1}$ of slope 2 and line $\\mathrm{L}_{2}$ of slope $\\frac{1}{2}$ intersect at the origin O. In the first quadrant, $\\mathrm{P}_{1}$, $\\mathrm{P}_{2}, \\ldots, \\mathrm{P}_{12}$ are 12 points on line $\\mathrm{L}_{1}$ and $\\mathrm{Q}_{1}, \\mathrm{Q}_{2}, \\ldots, \\mathrm{Q}_{9}$ are 9 points on line $\\mathrm{L}_{2}$. Then the total number of triangles, that can be formed having vertices at three of the 22 points $\\mathrm{O}, \\mathrm{P}_{1}, \\mathrm{P}_{2}, \\ldots, \\mathrm{P}_{12}$, $\\mathrm{Q}_{1}, \\mathrm{Q}_{2}, \\ldots, \\mathrm{Q}_{9}$, is:""}","प्रवणता 2 की रेखा $\mathrm{L}_{1}$ और प्रवणता $\frac{1}{2}$ की रेखा $\mathrm{L}_{2}$ मूलबिंदु O पर प्रतिच्छेद करती हैं। प्रथम चतुर्थांश में, रेखा $\mathrm{L}_{1}$ पर 12 बिंदु $\mathrm{P}_{1}, \mathrm{P}_{2}, \ldots, \mathrm{P}_{12}$, हैं और रेखा $\mathrm{L}_{2}$ पर 9 बिंदु $\mathrm{Q}_{1}, \mathrm{Q}_{2}, \ldots, \mathrm{Q}_{9}$, हैं। तो 22 बिंदुओं $\mathrm{O}, \mathrm{P}_{1}$, $\mathrm{P}_{2}, \ldots, \mathrm{P}_{12}, \mathrm{Q}_{1}, \mathrm{Q}_{2}, \ldots, \mathrm{Q}_{9}$, में से तीन को शीर्ष लेकर बनाए जा सकने वाले त्रिभुजों की कुल संख्या है:","Line $\mathrm{L}_{1}$ of slope 2 and line $\mathrm{L}_{2}$ of slope $\frac{1}{2}$ intersect at the origin O. In the first quadrant, $\mathrm{P}_{1}$, $\mathrm{P}_{2}, \ldots, \mathrm{P}_{12}$ are 12 points on line $\mathrm{L}_{1}$ and $\mathrm{Q}_{1}, \mathrm{Q}_{2}, \ldots, \mathrm{Q}_{9}$ are 9 points on line $\mathrm{L}_{2}$. Then the total number of triangles, that can be formed having vertices at three of the 22 points $\mathrm{O}, \mathrm{P}_{1}, \mathrm{P}_{2}, \ldots, \mathrm{P}_{12}$, $\mathrm{Q}_{1}, \mathrm{Q}_{2}, \ldots, \mathrm{Q}_{9}$, is:","{""hindi"": [{""id"": ""347577280"", ""text"": ""1026"", ""displayId"": ""A""}, {""id"": ""347577281"", ""text"": ""1080"", ""displayId"": ""B""}, {""id"": ""347577282"", ""text"": ""1134"", ""displayId"": ""C""}, {""id"": ""347577283"", ""text"": ""1188"", ""displayId"": ""D""}], ""english"": [{""id"": ""347577280"", ""text"": ""1026"", ""displayId"": ""A""}, {""id"": ""347577281"", ""text"": ""1080"", ""displayId"": ""B""}, {""id"": ""347577282"", ""text"": ""1134"", ""displayId"": ""C""}, {""id"": ""347577283"", ""text"": ""1188"", ""displayId"": ""D""}]}","[""347577282""]","{""hindi"": """", ""english"": """"}","{""hindi"": """", ""english"": """"}","{""isMandatory"": false, ""correctMarks"": 4, ""incorrectMarks"": -1}",,approved,,,0,,1785668031,1785991680,C,1134,"## Concept
+
+The number of triangles formed is the total combinations of 3 points minus the combinations of 3 collinear points.
+
+## Formula
+
+$$\text{Triangles} = \binom{n}{3} - \sum \binom{k_i}{3}$$
+
+## Steps
+
+1. Identify the total points: $n = 1 + 12 + 9 = 22$.
+2. Calculate total ways to choose any 3 points: $\binom{22}{3} = \frac{22 \times 21 \times 20}{6} = 1540$.
+3. Count collinear triplets on line $L_1$ (13 points including $O$): $\binom{13}{3} = \frac{13 \times 12 \times 11}{6} = 286$.
+4. Count collinear triplets on line $L_2$ (10 points including $O$): $\binom{10}{3} = \frac{10 \times 9 \times 8}{6} = 120$.
+5. Subtract collinear cases: $1540 - (286 + 120) = 1134$.
+
+## Answer
+
+**Answer:** 1134 → (C)
+
+## Note
+
+Remember that the origin $O$ lies on both lines and must be included in both collinear sets."
+1jQOyylVvU3zce,34757783,jee,jee_main,mathematics,dummy,,2025,2025-04-03_evening_domestic,JEE Main 2025 (Online) 3 April Evening Shift,,FALSE,mcq,"{""hindi"": ""यदि यादृच्छिक चर $X$ के मान $x$ लेने की प्रायिकता $P(X=x)=k(x+1) 3^{-x}, x=0,1,2,3 \\ldots$, द्वारा दी गई है, जहाँ $k$ एक अचर है, तो $P(X \\geq 3)$ बराबर है"", ""english"": ""If the probability that the random variable $X$ takes the value $x$ is given by\n\n$P(X=x)=k(x+1) 3^{-x}, x=0,1,2,3 \\ldots$, where $k$ is a constant, then $P(X \\geq 3)$ is equal to""}","यदि यादृच्छिक चर $X$ के मान $x$ लेने की प्रायिकता $P(X=x)=k(x+1) 3^{-x}, x=0,1,2,3 \ldots$, द्वारा दी गई है, जहाँ $k$ एक अचर है, तो $P(X \geq 3)$ बराबर है","If the probability that the random variable $X$ takes the value $x$ is given by
+
+$P(X=x)=k(x+1) 3^{-x}, x=0,1,2,3 \ldots$, where $k$ is a constant, then $P(X \geq 3)$ is equal to","{""hindi"": [{""id"": ""347577284"", ""text"": ""$\\frac{7}{27}$"", ""displayId"": ""A""}, {""id"": ""347577285"", ""text"": ""$\\frac{8}{27}$"", ""displayId"": ""B""}, {""id"": ""347577286"", ""text"": ""$\\frac{\\frac{4}{9}}{9}$"", ""displayId"": ""C""}, {""id"": ""347577287"", ""text"": ""$\\frac{1}{9}$"", ""displayId"": ""D""}], ""english"": [{""id"": ""347577284"", ""text"": ""$\\frac{7}{27}$"", ""displayId"": ""A""}, {""id"": ""347577285"", ""text"": ""$\\frac{8}{27}$"", ""displayId"": ""B""}, {""id"": ""347577286"", ""text"": ""$\\frac{4}{9}$"", ""displayId"": ""C""}, {""id"": ""347577287"", ""text"": ""$\\frac{1}{9}$"", ""displayId"": ""D""}]}","[""347577287""]","{""hindi"": """", ""english"": """"}","{""hindi"": """", ""english"": """"}","{""isMandatory"": false, ""correctMarks"": 4, ""incorrectMarks"": -1}",,approved,,,0,,1785668031,1785991698,D,$\frac{1}{9}$,"## Concept
+
+The total probability of a discrete random variable is $1$, and the sum of an arithmetico-geometric series determines the unknown constant.
+
+## Formula
+
+$$\sum_{x=0}^{\infty} P(X=x) = 1$$
+$$\sum_{x=0}^{\infty} (x+1) r^x = \frac{1}{(1-r)^2} \quad \text{for } |r| < 1$$
+
+## Steps
+
+1. Use total probability to find $k$:
+   $$k \sum_{x=0}^{\infty} (x+1)\left(\frac{1}{3}\right)^x = k \cdot \frac{1}{\left(1 - \frac{1}{3}\right)^2} = k \cdot \frac{9}{4} = 1 \implies k = \frac{4}{9}$$
+
+2. Compute $P(X < 3) = P(X=0) + P(X=1) + P(X=2)$:
+   $$P(X < 3) = \frac{4}{9}\left[1 + \frac{2}{3} + \frac{3}{9}\right] = \frac{4}{9} \times 2 = \frac{8}{9}$$
+
+3. Calculate $P(X \geq 3)$ using the complement rule:
+   $$P(X \geq 3) = 1 - P(X < 3) = 1 - \frac{8}{9} = \frac{1}{9}$$
+
+## Answer
+
+**Answer:** $\frac{1}{9}$ → (D)
+
+## Note
+
+Using the complement $P(X \ge 3) = 1 - P(X < 3)$ avoids evaluating an infinite tail series."
+1jVJCgI8Q6nESI,347577546,jee,jee_main,mathematics,dummy,,2025,2025-04-03_morning_domestic,JEE Main 2025 (Online) 3 April Morning Shift,,FALSE,integer,"{""hindi"": ""यदि सात-अंकों की संख्याओं, जिनके अंकों का योग सम है, की संख्या $m \\cdot n \\cdot 10^{n} ; m, n \\in\\{1,2,3, \\ldots, 9\\}$\n\nहै, तो $m+n$ बराबर है $\\_\\_\\_\\_$"", ""english"": ""If the number of seven-digit numbers, such that the sum of their digits is even, is $m \\cdot n \\cdot 10^{n} ; m, n \\in\\{1,2,3, \\ldots, 9\\}$, then $m+n$ is equal to $\\_\\_\\_\\_$""}","यदि सात-अंकों की संख्याओं, जिनके अंकों का योग सम है, की संख्या $m \cdot n \cdot 10^{n} ; m, n \in\{1,2,3, \ldots, 9\}$
+
+है, तो $m+n$ बराबर है $\_\_\_\_$","If the number of seven-digit numbers, such that the sum of their digits is even, is $m \cdot n \cdot 10^{n} ; m, n \in\{1,2,3, \ldots, 9\}$, then $m+n$ is equal to $\_\_\_\_$","{""hindi"": [], ""english"": []}",[],"{""hindi"": ""14"", ""english"": ""14""}","{""hindi"": """", ""english"": """"}","{""isMandatory"": false, ""correctMarks"": 4, ""incorrectMarks"": -1}",,approved,,,0,,1785668310,1785993575,,14,"## Concept
+
+The parity of the sum of digits of a number is completely determined by the choice of its last digit, which has 5 valid choices regardless of the preceding digits.
+
+## Formula
+
+$$\text{Total favorable numbers} = d_1 \times d_2 \times \dots \times d_6 \times d_7$$
+
+## Steps
+
+1. The first digit can be chosen from $\{1, 2, \dots, 9\}$ in $9$ ways.
+2. The next $5$ digits (2nd to 6th) can each be chosen from $\{0, 1, \dots, 9\}$ in $10$ ways: $10^5$ ways.
+3. For any fixed first $6$ digits, exactly $5$ out of the $10$ digits make the total sum even.
+4. Total 7-digit numbers with an even digit sum $= 9 \times 10^5 \times 5 = 9 \cdot 5 \cdot 10^5$.
+5. Comparing with $m \cdot n \cdot 10^n$, we get $n = 5$ and $m = 9$, so $m + n = 9 + 5 = 14$.
+
+## Answer
+
+**Answer:** 14
+
+## Note
+
+Exactly half of all 7-digit numbers have an even sum of digits: $\frac{9 \times 10^6}{2} = 45 \times 10^5$."
+1jQOyymLwWikec,34757785,jee,jee_main,mathematics,dummy,,2025,2025-04-03_evening_domestic,JEE Main 2025 (Online) 3 April Evening Shift,,FALSE,mcq,"{""hindi"": ""एक बिंदु P से होकर जाने वाली रेखाओं $x(3 \\lambda+1)+y(7 \\lambda+2)=17 \\lambda+5$ जहाँ $\\lambda$ एक प्राचल है, का विचार कीजिए। इनमें से एक रेखा (माना $L$ ), मूल बिंदु से अधिकतम दूरी पर है। यदि रेखा $L$ की बिंदु $(3,6)$ से दूरी $d$ है, तो $d^{2}$ बराबर है"", ""english"": ""Consider the lines $x(3 \\lambda+1)+y(7 \\lambda+2)=17 \\lambda+5, \\lambda$ being a parameter, all passing through a point P . One of these lines (say $L$ ) is farthest from the origin. If the distance of $L$ from the point $(3,6)$ is $d$, then the value of $d^{2}$ is""}","एक बिंदु P से होकर जाने वाली रेखाओं $x(3 \lambda+1)+y(7 \lambda+2)=17 \lambda+5$ जहाँ $\lambda$ एक प्राचल है, का विचार कीजिए। इनमें से एक रेखा (माना $L$ ), मूल बिंदु से अधिकतम दूरी पर है। यदि रेखा $L$ की बिंदु $(3,6)$ से दूरी $d$ है, तो $d^{2}$ बराबर है","Consider the lines $x(3 \lambda+1)+y(7 \lambda+2)=17 \lambda+5, \lambda$ being a parameter, all passing through a point P . One of these lines (say $L$ ) is farthest from the origin. If the distance of $L$ from the point $(3,6)$ is $d$, then the value of $d^{2}$ is","{""hindi"": [{""id"": ""347577292"", ""text"": ""20"", ""displayId"": ""A""}, {""id"": ""347577293"", ""text"": ""10"", ""displayId"": ""B""}, {""id"": ""347577294"", ""text"": ""30"", ""displayId"": ""C""}, {""id"": ""347577295"", ""text"": ""15"", ""displayId"": ""D""}], ""english"": [{""id"": ""347577292"", ""text"": ""20"", ""displayId"": ""A""}, {""id"": ""347577293"", ""text"": ""10"", ""displayId"": ""B""}, {""id"": ""347577294"", ""text"": ""30"", ""displayId"": ""C""}, {""id"": ""347577295"", ""text"": ""15"", ""displayId"": ""D""}]}","[""347577292""]","{""hindi"": """", ""english"": """"}","{""hindi"": """", ""english"": """"}","{""isMandatory"": false, ""correctMarks"": 4, ""incorrectMarks"": -1}",,approved,,,0,,1785668031,1785991743,A,20,"## Concept
+
+A family of lines passing through a fixed point $P$ is farthest from the origin when the line is perpendicular to $OP$.
+
+## Formula
+
+- Distance from $(x_1, y_1)$ to $ax + by + c = 0$:
+$$d = \frac{|ax_1 + by_1 + c|}{\sqrt{a^2 + b^2}}$$
+
+## Steps
+
+1. Rewrite the family of lines as $(x + 2y - 5) + \lambda(3x + 7y - 17) = 0$ to find the fixed point $P(1, 2)$.
+2. Since the farthest line $L$ is perpendicular to $OP$ (slope $m_{OP} = 2$), its slope is $m = -\frac{1}{2}$.
+3. Find the equation of line $L$: $y - 2 = -\frac{1}{2}(x - 1) \implies x + 2y - 5 = 0$.
+4. Calculate the distance $d$ from $(3, 6)$ to line $L$:
+$$d = \frac{|1(3) + 2(6) - 5|}{\sqrt{1^2 + 2^2}} = \frac{10}{\sqrt{5}} = 2\sqrt{5}$$
+5. Square the distance: $d^2 = (2\sqrt{5})^2 = 20$.
+
+## Answer
+
+**Answer:** 20 → (A)
+
+## Note
+
+The line through $P$ farthest from origin $O$ always satisfies $OP \perp L$, giving distance equal to $OP$."

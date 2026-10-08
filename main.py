@@ -12,9 +12,9 @@ from pydantic import BaseModel, Field
 load_dotenv()
 
 INPUT_CSV = "Data/data-QA-JEE-Data_preprocessed.csv"
-OUTPUT_CSV = "Data/top_5_explanations.csv"
+OUTPUT_CSV = "Data/JEE_explanations.csv"
 MODEL = os.getenv("OPENROUTER_MODEL", "openai/gpt-6-luna")
-DEFAULT_N = 2  # new questions to generate per run
+DEFAULT_N = 5  # new questions to generate per run
 BATCH_SIZE = 5  # questions per abatch call
 MAX_CONCURRENCY = 5  # parallel requests inside one batch
 
@@ -32,7 +32,9 @@ class SolutionMarkdown(BaseModel):
 SYSTEM_PROMPT = """You are an expert STEM educator writing short, high-yield JEE solutions for the Superteacher mobile card.
 The output is rendered as a compact card, so keep every section brief and scannable.
 
-Output EXACTLY this structure, using these headings and nothing else before or after:
+Output EXACTLY this layout. Each heading is a markdown heading on its own line. 
+Leave one blank line after the heading, and start the content on the next line. 
+Never put content on the same line as a heading.
 
 ## Concept
 One or two short sentences (under 30 words) stating the core idea. For setup or derivation problems, use "## Key setup" instead of "## Concept".
@@ -57,6 +59,8 @@ Rules:
 - Do NOT add an introduction, a conclusion, code fences, or extra headings.
 - Keep LaTeX crisp. Use \\text{} for units. Write numbers with units where helpful (e.g., $18\\ \\text{W}$).
 - The final answer must match the Correct Option / Correct Value given by the user.
+- Work out the solution privately. The written steps must be a clean, linear derivation that reaches the Correct Option / Correct Value directly.
+- NEVER write self-corrections or trial attempts (no "wait", "let me re-check", "re-evaluating", "if ... then ...", "discard", or retried values). If a setup seems inconsistent, silently re-derive it before writing.
 """
 
 USER_TEMPLATE = """Question:
@@ -79,8 +83,8 @@ def build_chain():
         model=MODEL,
         base_url="https://openrouter.ai/api/v1",
         api_key=os.getenv("OPENROUTER_API_KEY"),
-        temperature=0.1,
-        reasoning_effort="low",
+        temperature=0.01,
+        reasoning_effort="medium",
     )
     prompt = ChatPromptTemplate.from_messages(
         [
