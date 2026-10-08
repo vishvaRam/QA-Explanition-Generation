@@ -2,7 +2,6 @@ import asyncio
 import csv
 import json
 import os
-import sys
 
 from dotenv import load_dotenv
 from langchain_core.messages import SystemMessage
@@ -15,9 +14,9 @@ load_dotenv()
 INPUT_CSV = "Data/data-QA-JEE-Data_preprocessed.csv"
 OUTPUT_CSV = "Data/top_5_explanations.csv"
 MODEL = os.getenv("OPENROUTER_MODEL", "openai/gpt-6-luna")
-DEFAULT_N = 2          # new questions to generate per run
-BATCH_SIZE = 5         # questions per abatch call
-MAX_CONCURRENCY = 5    # parallel requests inside one batch
+DEFAULT_N = 2  # new questions to generate per run
+BATCH_SIZE = 5  # questions per abatch call
+MAX_CONCURRENCY = 5  # parallel requests inside one batch
 
 # Columns the Superteacher viewer reads, added on top of the original CSV columns
 EXTRA_COLUMNS = ["correct_display_id", "correct_answer", "explanation_markdown"]
@@ -82,15 +81,16 @@ def build_chain():
         api_key=os.getenv("OPENROUTER_API_KEY"),
         temperature=0.1,
         reasoning_effort="low",
-        
     )
     prompt = ChatPromptTemplate.from_messages(
         [
             SystemMessage(content=SYSTEM_PROMPT),  # literal, braces are not parsed
-            ("user", USER_TEMPLATE),               # only this one has variables
+            ("user", USER_TEMPLATE),  # only this one has variables
         ]
     )
-    return prompt | llm.with_structured_output(SolutionMarkdown, method="function_calling")
+    return prompt | llm.with_structured_output(
+        SolutionMarkdown, method="function_calling"
+    )
 
 
 def extract_correct_answer_details(row: dict[str, str]) -> tuple[str, str]:
@@ -104,7 +104,7 @@ def extract_correct_answer_details(row: dict[str, str]) -> tuple[str, str]:
             corr_list = json.loads(correct_options_raw)
             if corr_list:
                 correct_option_id = str(corr_list[0])
-        except Exception:
+        except Exception:  # noqa: BLE001, S110
             pass
 
     display_id = ""
@@ -118,13 +118,13 @@ def extract_correct_answer_details(row: dict[str, str]) -> tuple[str, str]:
                     display_id = opt.get("displayId", "")
                     ans_text = opt.get("text", "")
                     break
-        except Exception:
+        except Exception:  # noqa: BLE001, S110
             pass
 
     if not ans_text and answer_raw:
         try:
             ans_text = json.loads(answer_raw).get("english", "")
-        except Exception:
+        except Exception:  # noqa: BLE001
             ans_text = answer_raw
 
     return display_id, ans_text
@@ -181,18 +181,24 @@ async def process(n: int) -> None:
                 break
 
     if not pending:
-        print("Nothing new to generate. All eligible questions already have explanations.")
+        print(
+            "Nothing new to generate. All eligible questions already have explanations."
+        )
         return
 
     # Keep the existing header if the file exists, so it is never rewritten
     if existing_header is None:
-        header = list(input_fields) + [c for c in EXTRA_COLUMNS if c not in input_fields]
+        header = list(input_fields) + [
+            c for c in EXTRA_COLUMNS if c not in input_fields
+        ]
     else:
         header = existing_header
         missing = [c for c in input_fields if c not in header]
         if missing:
-            print(f"Warning: existing output lacks columns {missing}. "
-                  "Delete the output file once if you want them included.")
+            print(
+                f"Warning: existing output lacks columns {missing}. "
+                "Delete the output file once if you want them included."
+            )
 
     chain = build_chain()
     processed = 0
@@ -202,13 +208,15 @@ async def process(n: int) -> None:
         meta = []
         for row in batch:
             disp_id, ans_text = extract_correct_answer_details(row)
-            inputs.append({
-                "question": row.get("english", ""),
-                "subject": row.get("subject", ""),
-                "q_type": row.get("type", ""),
-                "correct_display": disp_id or "N/A",
-                "correct_text": ans_text,
-            })
+            inputs.append(
+                {
+                    "question": row.get("english", ""),
+                    "subject": row.get("subject", ""),
+                    "q_type": row.get("type", ""),
+                    "correct_display": disp_id or "N/A",
+                    "correct_text": ans_text,
+                }
+            )
             meta.append((row, disp_id, ans_text))
 
         print(f"Batch of {len(batch)}: " + ", ".join(r.get("id", "") for r in batch))
@@ -224,11 +232,13 @@ async def process(n: int) -> None:
                 print(f"  FAILED ID {row.get('id')}: {result}")
                 continue
             out = {col: row.get(col, "") for col in input_fields}
-            out.update({
-                "correct_display_id": disp_id,
-                "correct_answer": ans_text,
-                "explanation_markdown": result.markdown_explanation,
-            })
+            out.update(
+                {
+                    "correct_display_id": disp_id,
+                    "correct_answer": ans_text,
+                    "explanation_markdown": result.markdown_explanation,
+                }
+            )
             new_rows.append(out)
 
         # Save after each batch so progress is never lost
