@@ -264,3 +264,305 @@ $$d = \frac{|1(3) + 2(6) - 5|}{\sqrt{1^2 + 2^2}} = \frac{10}{\sqrt{5}} = 2\sqrt{
 ## Note
 
 The line through $P$ farthest from origin $O$ always satisfies $OP \perp L$, giving distance equal to $OP$."
+1jQOyymkgTepSE,34757786,jee,jee_main,mathematics,dummy,,2025,2025-04-03_evening_domestic,JEE Main 2025 (Online) 3 April Evening Shift,,FALSE,mcq,"{""hindi"": ""यदि चार भिन्न बिंदु $(4,6),(-1,5),(0,0)$ और $(k, 3 k)$, त्रिज्या $r$ के एक वृत्त पर हैं, तो $10 k+r^{2}$ बराबर है"", ""english"": ""If the four distinct points $(4,6),(-1,5),(0,0)$ and $(k, 3 k)$ lie on a circle of radius $r$, then $10 k+r^{2}$ is equal to""}","यदि चार भिन्न बिंदु $(4,6),(-1,5),(0,0)$ और $(k, 3 k)$, त्रिज्या $r$ के एक वृत्त पर हैं, तो $10 k+r^{2}$ बराबर है","If the four distinct points $(4,6),(-1,5),(0,0)$ and $(k, 3 k)$ lie on a circle of radius $r$, then $10 k+r^{2}$ is equal to","{""hindi"": [{""id"": ""347577296"", ""text"": ""32"", ""displayId"": ""A""}, {""id"": ""347577297"", ""text"": ""33"", ""displayId"": ""B""}, {""id"": ""347577298"", ""text"": ""34"", ""displayId"": ""C""}, {""id"": ""347577299"", ""text"": ""35"", ""displayId"": ""D""}], ""english"": [{""id"": ""347577296"", ""text"": ""32"", ""displayId"": ""A""}, {""id"": ""347577297"", ""text"": ""33"", ""displayId"": ""B""}, {""id"": ""347577298"", ""text"": ""34"", ""displayId"": ""C""}, {""id"": ""347577299"", ""text"": ""35"", ""displayId"": ""D""}]}","[""347577299""]","{""hindi"": """", ""english"": """"}","{""hindi"": """", ""english"": """"}","{""isMandatory"": false, ""correctMarks"": 4, ""incorrectMarks"": -1}",,approved,,,0,,1785668031,1785991761,D,35,"## Concept
+
+Substitute the given points into the general equation of a circle passing through the origin to find the center, radius, and value of $k$.
+
+## Formula
+
+The general equation of a circle passing through $(0,0)$ is:
+$$x^2 + y^2 + 2gx + 2fy = 0$$
+$$\text{Radius, } r^2 = g^2 + f^2$$
+
+## Steps
+
+1. Substitute $(4,6)$ and $(-1,5)$ into the circle's equation:
+   $$8g + 12f = -52 \implies 2g + 3f = -13$$
+   $$-2g + 10f = -26$$
+
+2. Solve the linear system to find the circle's parameters:
+   $$f = -3,\quad g = -2 \implies r^2 = (-2)^2 + (-3)^2 = 13$$
+
+3. Substitute the distinct point $(k, 3k)$ into $x^2 + y^2 - 4x - 6y = 0$:
+   $$k^2 + 9k^2 - 4k - 18k = 0 \implies 10k(k - 2.2) = 0 \implies k = \frac{11}{5} \quad (k \neq 0)$$
+
+4. Calculate the required expression:
+   $$10k + r^2 = 10\left(\frac{11}{5}\right) + 13 = 22 + 13 = 35$$
+
+## Answer
+
+**Answer:** 35 → (D)
+
+## Note
+
+Ensure $k \neq 0$, as the four given points on the circle must be distinct."
+1jQOyyn7iW6EvZ,34757787,jee,jee_main,mathematics,dummy,,2025,2025-04-03_evening_domestic,JEE Main 2025 (Online) 3 April Evening Shift,,FALSE,mcq,"{""hindi"": ""माना उत्केन्द्रता $\\frac{1}{2}$ और नाभियों $( \\pm 2,0)$ के दीर्घवृत $E: \\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$ को घेरते हुए न्यूनतम क्षेत्रफल का वृत $C$ है। माना $P Q R$ एक चर त्रिभुज है, जिसका शीर्ष $P$, वृत $C$ पर है और $2 a$ लंबी भुजा $Q R$ दीर्घवृत $E$ के दीर्घ अक्ष के समांतर है। यदि ऋणात्मक $y$-अक्ष से दीर्घवृत E का प्रतिच्छेदन बिंदु भुजा QR पर है, तो त्रिभुज $P Q R$ का अधिकतम क्षेत्रफल है:"", ""english"": ""Let $C$ be the circle of minimum area enclosing the ellipse $E: \\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1$ with eccentricity $\\frac{1}{2}$ and foci $( \\pm 2,0)$. Let $P Q R$ be a variable triangle, whose vertex $P$ is on the circle $C$ and the side $Q R$ of length $2 a$ is parallel to the major axis of $E$ and contains the point of intersection of $E$ with the negative $y$-axis. Then the maximum area of the triangle $P Q R$ is :""}","माना उत्केन्द्रता $\frac{1}{2}$ और नाभियों $( \pm 2,0)$ के दीर्घवृत $E: \frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1$ को घेरते हुए न्यूनतम क्षेत्रफल का वृत $C$ है। माना $P Q R$ एक चर त्रिभुज है, जिसका शीर्ष $P$, वृत $C$ पर है और $2 a$ लंबी भुजा $Q R$ दीर्घवृत $E$ के दीर्घ अक्ष के समांतर है। यदि ऋणात्मक $y$-अक्ष से दीर्घवृत E का प्रतिच्छेदन बिंदु भुजा QR पर है, तो त्रिभुज $P Q R$ का अधिकतम क्षेत्रफल है:","Let $C$ be the circle of minimum area enclosing the ellipse $E: \frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1$ with eccentricity $\frac{1}{2}$ and foci $( \pm 2,0)$. Let $P Q R$ be a variable triangle, whose vertex $P$ is on the circle $C$ and the side $Q R$ of length $2 a$ is parallel to the major axis of $E$ and contains the point of intersection of $E$ with the negative $y$-axis. Then the maximum area of the triangle $P Q R$ is :","{""hindi"": [{""id"": ""347577300"", ""text"": ""$8(2+\\sqrt{3})$"", ""displayId"": ""A""}, {""id"": ""347577301"", ""text"": ""$8(3+\\sqrt{2})$"", ""displayId"": ""B""}, {""id"": ""347577302"", ""text"": ""$6(2+\\sqrt{3})$"", ""displayId"": ""C""}, {""id"": ""347577303"", ""text"": ""$6(3+\\sqrt{2})$"", ""displayId"": ""D""}], ""english"": [{""id"": ""347577300"", ""text"": ""$8(2+\\sqrt{3})$"", ""displayId"": ""A""}, {""id"": ""347577301"", ""text"": ""$8(3+\\sqrt{2})$"", ""displayId"": ""B""}, {""id"": ""347577302"", ""text"": ""$6(2+\\sqrt{3})$"", ""displayId"": ""C""}, {""id"": ""347577303"", ""text"": ""$6(3+\\sqrt{2})$"", ""displayId"": ""D""}]}","[""347577300""]","{""hindi"": """", ""english"": """"}","{""hindi"": """", ""english"": """"}","{""isMandatory"": false, ""correctMarks"": 4, ""incorrectMarks"": -1}",,approved,,,0,,1785668031,1785991781,A,$8(2+\sqrt{3})$,"## Concept
+
+The minimum enclosing circle of an ellipse centered at the origin has a radius equal to the ellipse's semi-major axis.
+
+## Formula
+
+$$\text{Area}(\triangle PQR) = \frac{1}{2} \times \text{base} \times h_{\max}$$
+
+## Steps
+
+1. Find the ellipse parameters from $ae = 2$ and $e = \frac{1}{2}$:
+   $$a = 4, \quad b = \sqrt{a^2(1 - e^2)} = 2\sqrt{3}$$
+
+2. Determine the enclosing circle $C$ with center $(0,0)$ and radius $R = a = 4$:
+   $$C: x^2 + y^2 = 16$$
+
+3. The base $QR$ lies on the horizontal line $y = -b = -2\sqrt{3}$ with fixed length $2a = 8$.
+
+4. Maximize the height $h$ from vertex $P$ on circle $C$ to the line $y = -2\sqrt{3}$:
+   $$h_{\max} = y_{\max} - (-2\sqrt{3}) = 4 + 2\sqrt{3}$$
+
+5. Compute the maximum area of $\triangle PQR$:
+   $$\text{Area}_{\max} = \frac{1}{2} \times 8 \times (4 + 2\sqrt{3}) = 8(2 + \sqrt{3})$$
+
+## Answer
+
+**Answer:** $8(2+\sqrt{3})$ → (A)
+
+## Note
+
+The maximum height occurs when $P$ is at the topmost point $(0, 4)$ of the enclosing circle."
+1jQOyynV0Ow1ib,34757788,jee,jee_main,mathematics,dummy,,2025,2025-04-03_evening_domestic,JEE Main 2025 (Online) 3 April Evening Shift,,FALSE,mcq,"{""hindi"": ""समीकरण $(4-\\sqrt{3}) \\sin x-2 \\sqrt{3} \\cos ^{2} x=-\\frac{4}{1+\\sqrt{3}}, x \\in\\left[-2 \\pi, \\frac{5 \\pi}{2}\\right]$ के हलों की संख्या है:"", ""english"": ""The number of solutions of the equation $(4-\\sqrt{3}) \\sin x-2 \\sqrt{3} \\cos ^{2} x=-\\frac{4}{1+\\sqrt{3}}, x \\in\\left[-2 \\pi, \\frac{5 \\pi}{2}\\right]$ is""}","समीकरण $(4-\sqrt{3}) \sin x-2 \sqrt{3} \cos ^{2} x=-\frac{4}{1+\sqrt{3}}, x \in\left[-2 \pi, \frac{5 \pi}{2}\right]$ के हलों की संख्या है:","The number of solutions of the equation $(4-\sqrt{3}) \sin x-2 \sqrt{3} \cos ^{2} x=-\frac{4}{1+\sqrt{3}}, x \in\left[-2 \pi, \frac{5 \pi}{2}\right]$ is","{""hindi"": [{""id"": ""347577304"", ""text"": ""5"", ""displayId"": ""A""}, {""id"": ""347577305"", ""text"": ""6"", ""displayId"": ""B""}, {""id"": ""347577306"", ""text"": ""3"", ""displayId"": ""C""}, {""id"": ""347577307"", ""text"": ""4"", ""displayId"": ""D""}], ""english"": [{""id"": ""347577304"", ""text"": ""5"", ""displayId"": ""A""}, {""id"": ""347577305"", ""text"": ""6"", ""displayId"": ""B""}, {""id"": ""347577306"", ""text"": ""3"", ""displayId"": ""C""}, {""id"": ""347577307"", ""text"": ""4"", ""displayId"": ""D""}]}","[""347577304""]","{""hindi"": """", ""english"": """"}","{""hindi"": """", ""english"": """"}","{""isMandatory"": false, ""correctMarks"": 4, ""incorrectMarks"": -1}",,approved,,,0,,1785668031,1785991795,A,5,"## Concept
+
+Convert the trigonometric equation into a quadratic in $\sin x$ and find the number of values of $x$ in the given interval.
+
+## Formula
+
+$$\cos^2 x = 1 - \sin^2 x$$
+
+## Steps
+
+1. Simplify the right-hand side:
+   $$-\frac{4}{1+\sqrt{3}} = -\frac{4(\sqrt{3}-1)}{2} = 2 - 2\sqrt{3}$$
+
+2. Express the equation in terms of $\sin x$ using $\cos^2 x = 1 - \sin^2 x$:
+   $$2\sqrt{3}\sin^2 x + (4-\sqrt{3})\sin x - 2 = 0$$
+
+3. Factor the quadratic equation:
+   $$(2\sin x - 1)(\sqrt{3}\sin x + 2) = 0 \implies \sin x = \frac{1}{2} \quad \left(\text{since } \sin x \neq -\frac{2}{\sqrt{3}}\right)$$
+
+4. Count the solutions of $\sin x = \frac{1}{2}$ in $x \in \left[-2\pi, \frac{5\pi}{2}\right]$:
+   $$x \in \left\{ -\frac{11\pi}{6}, -\frac{7\pi}{6}, \frac{\pi}{6}, \frac{5\pi}{6}, \frac{13\pi}{6} \right\}$$
+
+## Answer
+
+**Answer:** 5 → (A)
+
+## Note
+
+Ensure you check both negative and positive cycles within the specific domain boundaries."
+1jVJCgIrgwSsiO,347577548,jee,jee_main,mathematics,dummy,,2025,2025-04-03_morning_domestic,JEE Main 2025 (Online) 3 April Morning Shift,,FALSE,integer,"{""hindi"": ""माना अतिपरवलय II: $\\frac{x^{2}}{a^{2}}-\\frac{y^{2}}{b^{2}}=1$ पर बिंदु $\\mathbf{P}(4,2 \\sqrt{3})$ की नाभीय दूरिओं का गुणनफल 32 है। माना H के संयुग्मी अक्ष की लंबाई $p$ है और इसकी नाभिलंब जीवा की लंबाई $q$ है। तो $p^{2}+q^{2}$ बराबर है"", ""english"": ""Let the product of the focal distances of the point $\\mathbf{P}(4,2 \\sqrt{3})$ on the hyperbola $\\mathrm{H}: \\frac{x^{2}}{a^{2}}-\\frac{y^{2}}{b^{2}}=1$ be 32.\n\nLet the length of the conjugate axis of H be $p$ and the length of its latus rectum be $q$. Then $p^{2}+q^{2}$ is equal to $\\_\\_\\_\\_$""}","माना अतिपरवलय II: $\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=1$ पर बिंदु $\mathbf{P}(4,2 \sqrt{3})$ की नाभीय दूरिओं का गुणनफल 32 है। माना H के संयुग्मी अक्ष की लंबाई $p$ है और इसकी नाभिलंब जीवा की लंबाई $q$ है। तो $p^{2}+q^{2}$ बराबर है","Let the product of the focal distances of the point $\mathbf{P}(4,2 \sqrt{3})$ on the hyperbola $\mathrm{H}: \frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=1$ be 32.
+
+Let the length of the conjugate axis of H be $p$ and the length of its latus rectum be $q$. Then $p^{2}+q^{2}$ is equal to $\_\_\_\_$","{""hindi"": [], ""english"": []}",[],"{""hindi"": ""120"", ""english"": ""120""}","{""hindi"": """", ""english"": """"}","{""isMandatory"": false, ""correctMarks"": 4, ""incorrectMarks"": -1}",,approved,,,0,,1785668310,1785993583,,120,"## Concept
+
+The product of the focal distances of a point $(x_1, y_1)$ on the hyperbola $\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1$ is $e^2 x_1^2 - a^2$.
+
+## Formula
+
+- Focal distance product: $SP \cdot S'P = e^2 x_1^2 - a^2$
+- Eccentricity relation: $b^2 = a^2(e^2 - 1)$
+- Conjugate axis: $p = 2b$, Latus rectum: $q = \frac{2b^2}{a}$
+
+## Steps
+
+1. Substitute $P(4, 2\sqrt{3})$ into the hyperbola equation:
+   $$\frac{16}{a^2} - \frac{12}{b^2} = 1 \implies b^2 = \frac{12a^2}{16 - a^2} \implies e^2 = 1 + \frac{b^2}{a^2} = \frac{28 - a^2}{16 - a^2}$$
+
+2. Use the given product of focal distances with $x_1 = 4$:
+   $$16e^2 - a^2 = 32 \implies 16\left(\frac{28 - a^2}{16 - a^2}\right) - a^2 = 32 \implies a^4 = 64 \implies a^2 = 8$$
+
+3. Find $b^2$ using $a^2 = 8$:
+   $$b^2 = \frac{12(8)}{16 - 8} = 12$$
+
+4. Compute $p^2 + q^2$:
+   $$p^2 + q^2 = 4b^2 + \frac{4b^4}{a^2} = 4(12) + \frac{4(144)}{8} = 48 + 72 = 120$$
+
+## Answer
+
+**Answer:** 120
+
+## Note
+
+For hyperbola $\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1$, the focal radii are $|ex_1 - a|$ and $|ex_1 + a|$."
+1jVJU8MDjg5YXa,347577551,jee,jee_main,physics,dummy,,2025,2025-04-03_morning_domestic,JEE Main 2025 (Online) 3 April Morning Shift,,FALSE,mcq,"{""hindi"": ""एक व्यक्ति 3 भिन्न कणों के द्रव्यमान $435.42 \\mathrm{~g}, 226.3 \\mathrm{~g}$ और 0.125 g मापता है। सार्थक संख्याओं के साथ अंकगणितीय संक्रियाओं के नियमों के अनुसार, तीनों कणों के द्रव्यमानों का योग होगा"", ""english"": ""A person measures mass of 3 different particles as $435.42 \\mathrm{~g}, 226.3 \\mathrm{~g}$ and 0.125 g . According to the rules for arithmetic operations with significant figures, the addition of the masses of 3 particles will be.""}","एक व्यक्ति 3 भिन्न कणों के द्रव्यमान $435.42 \mathrm{~g}, 226.3 \mathrm{~g}$ और 0.125 g मापता है। सार्थक संख्याओं के साथ अंकगणितीय संक्रियाओं के नियमों के अनुसार, तीनों कणों के द्रव्यमानों का योग होगा","A person measures mass of 3 different particles as $435.42 \mathrm{~g}, 226.3 \mathrm{~g}$ and 0.125 g . According to the rules for arithmetic operations with significant figures, the addition of the masses of 3 particles will be.","{""hindi"": [{""id"": ""3475771871"", ""text"": ""661.845 g"", ""displayId"": ""A""}, {""id"": ""3475771872"", ""text"": ""662 g"", ""displayId"": ""B""}, {""id"": ""3475771873"", ""text"": ""661.84 g"", ""displayId"": ""C""}, {""id"": ""3475771874"", ""text"": ""661.8 g"", ""displayId"": ""D""}], ""english"": [{""id"": ""3475771871"", ""text"": ""661.845 g"", ""displayId"": ""A""}, {""id"": ""3475771872"", ""text"": ""662 g"", ""displayId"": ""B""}, {""id"": ""3475771873"", ""text"": ""661.84 g"", ""displayId"": ""C""}, {""id"": ""3475771874"", ""text"": ""661.8 g"", ""displayId"": ""D""}]}","[""3475771874""]","{""hindi"": """", ""english"": """"}","{""hindi"": """", ""english"": """"}","{""isMandatory"": false, ""correctMarks"": 4, ""incorrectMarks"": -1}",,approved,,,0,,1785668310,1785993617,D,661.8 g,"## Concept
+
+In addition, the final result must retain as many decimal places as the measurement with the fewest decimal places.
+
+## Formula
+
+$$\text{Total Mass} = m_1 + m_2 + m_3$$
+
+## Steps
+
+1. Find the sum of the given masses:
+$$435.42\ \text{g} + 226.3\ \text{g} + 0.125\ \text{g} = 661.845\ \text{g}$$
+
+2. Identify the least number of decimal places among the values ($226.3\ \text{g}$ has $1$ decimal place).
+
+3. Round the sum to $1$ decimal place:
+$$661.845\ \text{g} \approx 661.8\ \text{g}$$
+
+## Answer
+
+**Answer:** $661.8\ \text{g}$ → (D)
+
+## Note
+
+In addition/subtraction, round off by decimal places, not by total significant figures."
+1jQOyyoWnEdWoO,34757790,jee,jee_main,mathematics,dummy,,2025,2025-04-03_evening_domestic,JEE Main 2025 (Online) 3 April Evening Shift,,FALSE,mcq,"{""hindi"": ""रेखा $\\frac{x-9}{2}=\\frac{y-13}{3}=\\frac{z-17}{6}$ के अनुदिश, बिंदु $(7,10,11)$ की रेखा $\\frac{x-4}{1}=\\frac{y-4}{0}=\\frac{z-2}{3}$ से दूरी है"", ""english"": ""The distance of the point (7, 10, 11) from the line $\\frac{x-4}{1}=\\frac{y-4}{0}=\\frac{z-2}{3}$ along the line $\\frac{x-9}{2}=\\frac{y-13}{3}=\\frac{z-17}{6}$ is""}","रेखा $\frac{x-9}{2}=\frac{y-13}{3}=\frac{z-17}{6}$ के अनुदिश, बिंदु $(7,10,11)$ की रेखा $\frac{x-4}{1}=\frac{y-4}{0}=\frac{z-2}{3}$ से दूरी है","The distance of the point (7, 10, 11) from the line $\frac{x-4}{1}=\frac{y-4}{0}=\frac{z-2}{3}$ along the line $\frac{x-9}{2}=\frac{y-13}{3}=\frac{z-17}{6}$ is","{""hindi"": [{""id"": ""347577312"", ""text"": ""12"", ""displayId"": ""A""}, {""id"": ""347577313"", ""text"": ""14"", ""displayId"": ""B""}, {""id"": ""347577314"", ""text"": ""16"", ""displayId"": ""C""}, {""id"": ""347577315"", ""text"": ""18"", ""displayId"": ""D""}], ""english"": [{""id"": ""347577312"", ""text"": ""12"", ""displayId"": ""A""}, {""id"": ""347577313"", ""text"": ""14"", ""displayId"": ""B""}, {""id"": ""347577314"", ""text"": ""16"", ""displayId"": ""C""}, {""id"": ""347577315"", ""text"": ""18"", ""displayId"": ""D""}]}","[""347577313""]","{""hindi"": """", ""english"": """"}","{""hindi"": """", ""english"": """"}","{""isMandatory"": false, ""correctMarks"": 4, ""incorrectMarks"": -1}",,approved,,,0,,1785668031,1785991834,B,14,"## Concept
+
+Find the intersection point of a line passing through the given point parallel to the reference line with the target line, then compute the distance.
+
+## Formula
+
+Equation of a line through point $(x_1, y_1, z_1)$ with direction ratios $\langle a, b, c \rangle$:
+$$\frac{x-x_1}{a} = \frac{y-y_1}{b} = \frac{z-z_1}{c} = r$$
+
+## Steps
+
+1. Equation of the line through $P(7, 10, 11)$ parallel to direction $\langle 2, 3, 6 \rangle$ is:
+$$\frac{x-7}{2} = \frac{y-10}{3} = \frac{z-11}{6} = r \implies Q(7+2r, 10+3r, 11+6r)$$
+2. Since $Q$ lies on $\frac{x-4}{1}=\frac{y-4}{0}=\frac{z-2}{3}$, equating the $y$-component gives:
+$$10 + 3r - 4 = 0 \implies r = -2$$
+3. The intersection point is $Q(3, 4, -1)$, which consistently satisfies all components.
+4. Calculate the distance $PQ$:
+$$PQ = |r| \sqrt{2^2 + 3^2 + 6^2} = 2 \times \sqrt{49} = 14$$
+
+## Answer
+
+**Answer:** 14 → (B)
+
+## Note
+
+""Distance along a line"" means measuring parallel to that line's direction, not the perpendicular distance."
+1jQOyypLcMyBF3,34757792,jee,jee_main,mathematics,dummy,,2025,2025-04-03_evening_domestic,JEE Main 2025 (Online) 3 April Evening Shift,,FALSE,mcq,"{""hindi"": ""वक्रों $y^{2}=8 x$ और $x^{2}+y^{2}+12 \\mathrm{y}+35=0$ के बीच न्यूनतम दूरी है"", ""english"": ""The shortest distance between the curves $y^{2}=8 x$ and $x^{2}+y^{2}+12 y+35=0$ is:""}",वक्रों $y^{2}=8 x$ और $x^{2}+y^{2}+12 \mathrm{y}+35=0$ के बीच न्यूनतम दूरी है,The shortest distance between the curves $y^{2}=8 x$ and $x^{2}+y^{2}+12 y+35=0$ is:,"{""hindi"": [{""id"": ""347577320"", ""text"": ""$2 \\sqrt{2}-1$"", ""displayId"": ""A""}, {""id"": ""347577321"", ""text"": ""$2 \\sqrt{3}-1$"", ""displayId"": ""B""}, {""id"": ""347577322"", ""text"": ""$3 \\sqrt{2}-1$"", ""displayId"": ""C""}, {""id"": ""347577323"", ""text"": ""$\\sqrt{2}$"", ""displayId"": ""D""}], ""english"": [{""id"": ""347577320"", ""text"": ""$2 \\sqrt{2}-1$"", ""displayId"": ""A""}, {""id"": ""347577321"", ""text"": ""$2 \\sqrt{3}-1$"", ""displayId"": ""B""}, {""id"": ""347577322"", ""text"": ""$3 \\sqrt{2}-1$"", ""displayId"": ""C""}, {""id"": ""347577323"", ""text"": ""$\\sqrt{2}$"", ""displayId"": ""D""}]}","[""347577320""]","{""hindi"": """", ""english"": """"}","{""hindi"": """", ""english"": """"}","{""isMandatory"": false, ""correctMarks"": 4, ""incorrectMarks"": -1}",,approved,,,0,,1785668031,1785991871,A,$2 \sqrt{2}-1$,"## Concept
+
+The shortest distance lies along the common normal of the curves, passing through the center of the circle.
+
+## Formula
+
+- Equation of circle: $(x-h)^2 + (y-k)^2 = r^2$
+- Normal to $y^2 = 4ax$: $y = mx - 2am - am^3$
+- Shortest distance: $d = CP - r$
+
+## Steps
+
+1. Rewrite the circle as $x^2 + (y+6)^2 = 1$, giving center $C(0,-6)$ and radius $r = 1$.
+2. For $y^2 = 8x$ ($a=2$), write the normal equation passing through $C(0,-6)$:
+   $$-6 = -4m - 2m^3 \implies m^3 + 2m - 3 = 0 \implies m = 1$$
+3. Find the point on the parabola $P(am^2, -2am) = (2, -4)$.
+4. Calculate the distance from $C(0,-6)$ to $P(2,-4)$:
+   $$CP = \sqrt{(2-0)^2 + (-4+6)^2} = \sqrt{8} = 2\sqrt{2}$$
+5. Subtract the radius to obtain the shortest distance:
+   $$d = 2\sqrt{2} - 1$$
+
+## Answer
+
+**Answer:** $2 \sqrt{2}-1$ → (A)
+
+## Note
+
+The shortest distance from a curve to a circle is always along the normal to the center minus the radius."
+1jQOyypiu9h12s,34757793,jee,jee_main,mathematics,dummy,,2025,2025-04-03_evening_domestic,JEE Main 2025 (Online) 3 April Evening Shift,,FALSE,mcq,"{""hindi"": ""समाकलन $\\int_{0}^{\\pi} \\frac{8 x d x}{4 \\cos ^{2} x+\\sin ^{2} x}$ बराबर है"", ""english"": ""The integral $\\int_{0}^{\\pi} \\frac{8 x d x}{4 \\cos ^{2} x+\\sin ^{2} x}$ is equal to""}",समाकलन $\int_{0}^{\pi} \frac{8 x d x}{4 \cos ^{2} x+\sin ^{2} x}$ बराबर है,The integral $\int_{0}^{\pi} \frac{8 x d x}{4 \cos ^{2} x+\sin ^{2} x}$ is equal to,"{""hindi"": [{""id"": ""347577324"", ""text"": ""$\\pi^{2}$"", ""displayId"": ""A""}, {""id"": ""347577325"", ""text"": ""$\\frac{3 \\pi^{2}}{2}$"", ""displayId"": ""B""}, {""id"": ""347577326"", ""text"": ""$2 \\pi^{2}$"", ""displayId"": ""C""}, {""id"": ""347577327"", ""text"": ""$4 \\pi^{2}$"", ""displayId"": ""D""}], ""english"": [{""id"": ""347577324"", ""text"": ""$\\pi^{2}$"", ""displayId"": ""A""}, {""id"": ""347577325"", ""text"": ""$\\frac{3 \\pi^{2}}{2}$"", ""displayId"": ""B""}, {""id"": ""347577326"", ""text"": ""$2 \\pi^{2}$"", ""displayId"": ""C""}, {""id"": ""347577327"", ""text"": ""$4 \\pi^{2}$"", ""displayId"": ""D""}]}","[""347577326""]","{""hindi"": """", ""english"": """"}","{""hindi"": """", ""english"": """"}","{""isMandatory"": false, ""correctMarks"": 4, ""incorrectMarks"": -1}",,approved,,,0,,1785668031,1785991929,C,$2 \pi^{2}$,"## Concept
+
+Use King's property to eliminate the $x$ in the numerator, then convert the denominator using $\tan x$ substitution.
+
+## Formula
+
+$$\int_0^a f(x)\,dx = \int_0^a f(a-x)\,dx$$
+$$\int \frac{dt}{t^2 + a^2} = \frac{1}{a}\tan^{-1}\left(\frac{t}{a}\right) + C$$
+
+## Steps
+
+1. Apply King's property: $I = \int_0^\pi \frac{8(\pi - x)}{4\cos^2 x + \sin^2 x}\,dx$, giving $2I = 8\pi \int_0^\pi \frac{dx}{4\cos^2 x + \sin^2 x}$.
+2. Simplify by symmetry: $I = 4\pi \times 2\int_0^{\pi/2} \frac{dx}{4\cos^2 x + \sin^2 x} = 8\pi \int_0^{\pi/2} \frac{\sec^2 x\,dx}{4 + \tan^2 x}$.
+3. Substitute $t = \tan x$ ($dt = \sec^2 x\,dx$): $I = 8\pi \int_0^\infty \frac{dt}{t^2 + 2^2}$.
+4. Evaluate the standard integral: $I = 8\pi \left[\frac{1}{2}\tan^{-1}\left(\frac{t}{2}\right)\right]_0^\infty = 8\pi \left(\frac{1}{2} \cdot \frac{\pi}{2}\right) = 2\pi^2$.
+
+## Answer
+
+**Answer:** $2 \pi^{2}$ → (C)
+
+## Note
+
+Dividing by $\cos^2 x$ before splitting the interval $(0, \pi)$ into $(0, \pi/2)$ causes a discontinuity at $x = \pi/2$."
+1jVJU8MyB55mWM,347577552,jee,jee_main,physics,dummy,,2025,2025-04-03_morning_domestic,JEE Main 2025 (Online) 3 April Morning Shift,,FALSE,mcq,"{""hindi"": ""सूची-I का सूची-II के साथ मिलान करें\n\n| सूची-I | सूची-II |\n| :--- | :--- |\n| A. गुरुत्वीय स्थिरांक | I. $\\left[\\mathrm{LT}^{-2}\\right]$ |\n| B. गुरुत्वीय स्थितिज ऊर्जा | II. $\\left[\\mathrm{L}^{2} \\mathrm{~T}^{-2}\\right]$ |\n| C. गुरुत्वीय विभव | III. $\\left[\\mathrm{ML}^{2} \\mathrm{~T}^{-2}\\right]$ |\n| D. गुरुत्वीय त्वरण | IV. $\\left[\\mathrm{M}^{-1} \\mathrm{~L}^{3} \\mathrm{~T}^{-2}\\right]$ |\n\nनीचे दिए गए विकल्पों में से सही उत्तर चुनें:"", ""english"": ""Match the LIST-I with LIST-II\n\n| LIST-I | LIST-II |\n| :--- | :--- |\n| A. Gravitational constant | I. $\\left[\\mathrm{LT}^{-2}\\right]$ |\n| B. Gravitational potential energy | II. $\\left[\\mathrm{L}^{2} \\mathrm{~T}^{-2}\\right]$ |\n| C. Gravitational potential | III. $\\left[\\mathrm{ML}^{2} \\mathrm{~T}^{-2}\\right]$ |\n| D. Acceleration due to gravity | IV. $\\left[\\mathrm{M}^{-1} \\mathrm{~L}^{3} \\mathrm{~T}^{-2}\\right]$ |\n\nChoose the correct answer from the options given below:""}","सूची-I का सूची-II के साथ मिलान करें
+
+| सूची-I | सूची-II |
+| :--- | :--- |
+| A. गुरुत्वीय स्थिरांक | I. $\left[\mathrm{LT}^{-2}\right]$ |
+| B. गुरुत्वीय स्थितिज ऊर्जा | II. $\left[\mathrm{L}^{2} \mathrm{~T}^{-2}\right]$ |
+| C. गुरुत्वीय विभव | III. $\left[\mathrm{ML}^{2} \mathrm{~T}^{-2}\right]$ |
+| D. गुरुत्वीय त्वरण | IV. $\left[\mathrm{M}^{-1} \mathrm{~L}^{3} \mathrm{~T}^{-2}\right]$ |
+
+नीचे दिए गए विकल्पों में से सही उत्तर चुनें:","Match the LIST-I with LIST-II
+
+| LIST-I | LIST-II |
+| :--- | :--- |
+| A. Gravitational constant | I. $\left[\mathrm{LT}^{-2}\right]$ |
+| B. Gravitational potential energy | II. $\left[\mathrm{L}^{2} \mathrm{~T}^{-2}\right]$ |
+| C. Gravitational potential | III. $\left[\mathrm{ML}^{2} \mathrm{~T}^{-2}\right]$ |
+| D. Acceleration due to gravity | IV. $\left[\mathrm{M}^{-1} \mathrm{~L}^{3} \mathrm{~T}^{-2}\right]$ |
+
+Choose the correct answer from the options given below:","{""hindi"": [{""id"": ""3475771875"", ""text"": ""A-IV, B-III, C-II, D-I"", ""displayId"": ""A""}, {""id"": ""3475771876"", ""text"": ""A-I, B-III, C-IV, D-II"", ""displayId"": ""B""}, {""id"": ""3475771877"", ""text"": ""A-III, B-II, C-I, D-IV"", ""displayId"": ""C""}, {""id"": ""3475771878"", ""text"": ""A-II, B-IV, C-III, D-I"", ""displayId"": ""D""}], ""english"": [{""id"": ""3475771875"", ""text"": ""A-IV, B-III, C-II, D-I"", ""displayId"": ""A""}, {""id"": ""3475771876"", ""text"": ""A-I, B-III, C-IV, D-II"", ""displayId"": ""B""}, {""id"": ""3475771877"", ""text"": ""A-III, B-II, C-I, D-IV"", ""displayId"": ""C""}, {""id"": ""3475771878"", ""text"": ""A-II, B-IV, C-III, D-I"", ""displayId"": ""D""}]}","[""3475771875""]","{""hindi"": """", ""english"": """"}","{""hindi"": """", ""english"": """"}","{""isMandatory"": false, ""correctMarks"": 4, ""incorrectMarks"": -1}",,approved,,,0,,1785668310,1785993641,A,"A-IV, B-III, C-II, D-I","## Concept
+
+Dimensional formulas are determined from the defining physical equations relating fundamental base units.
+
+## Formula
+
+- $F = \frac{G m_1 m_2}{r^2} \implies [G] = \frac{[F][r^2]}{[m]^2}$
+- $[U] = [\text{Work}] = [F \cdot r]$
+- $V = \frac{U}{m} \implies [V] = \frac{[U]}{[m]}$
+- $g = \text{acceleration} \implies [g] = \frac{[v]}{[t]}$
+
+## Steps
+
+1. **Gravitational constant ($G$):** $[G] = \frac{[\text{MLT}^{-2}][\text{L}^2]}{[\text{M}^2]} = [\text{M}^{-1}\text{L}^3\text{T}^{-2}]$ $\rightarrow$ **IV**
+2. **Gravitational potential energy ($U$):** $[U] = [\text{MLT}^{-2}][\text{L}] = [\text{ML}^2\text{T}^{-2}]$ $\rightarrow$ **III**
+3. **Gravitational potential ($V$):** $[V] = \frac{[\text{ML}^2\text{T}^{-2}]}{[\text{M}]} = [\text{L}^2\text{T}^{-2}]$ $\rightarrow$ **II**
+4. **Acceleration due to gravity ($g$):** $[g] = [\text{LT}^{-2}]$ $\rightarrow$ **I**
+
+## Answer
+
+**Answer:** A-IV, B-III, C-II, D-I → (A)
+
+## Note
+
+Gravitational potential is potential energy per unit mass, eliminating the mass dimension $[\text{M}]$."
+1jQOyyqTkuZ0kM,34757795,jee,jee_main,mathematics,dummy,,2025,2025-04-03_evening_domestic,JEE Main 2025 (Online) 3 April Evening Shift,,FALSE,mcq,"{""hindi"": ""माना अवकल समीकरण $\\frac{d y}{d x}+3\\left(\\tan ^{2} x\\right) y+3 y=\\sec ^{2} x, y(0)=\\frac{1}{3}+e^{3}$ का हल $y=y(x)$ है। तो $y\\left(\\frac{\\pi}{4}\\right)$ बराबर है"", ""english"": ""Let $y=y(x)$ be the solution of the differential equation $\\frac{d y}{d x}+3\\left(\\tan ^{2} x\\right) y+3 y=\\sec ^{2} x, y(0)=\\frac{1}{3}+e^{3}$. Then $y\\left(\\frac{\\pi}{4}\\right)$ is equal to""}","माना अवकल समीकरण $\frac{d y}{d x}+3\left(\tan ^{2} x\right) y+3 y=\sec ^{2} x, y(0)=\frac{1}{3}+e^{3}$ का हल $y=y(x)$ है। तो $y\left(\frac{\pi}{4}\right)$ बराबर है","Let $y=y(x)$ be the solution of the differential equation $\frac{d y}{d x}+3\left(\tan ^{2} x\right) y+3 y=\sec ^{2} x, y(0)=\frac{1}{3}+e^{3}$. Then $y\left(\frac{\pi}{4}\right)$ is equal to","{""hindi"": [{""id"": ""347577332"", ""text"": ""$\\frac{2}{3}+e^{3}$"", ""displayId"": ""A""}, {""id"": ""347577333"", ""text"": ""$\\frac{4}{3}+e^{3}$"", ""displayId"": ""B""}, {""id"": ""347577334"", ""text"": ""$\\frac{2}{3}$"", ""displayId"": ""C""}, {""id"": ""347577335"", ""text"": ""$\\frac{4}{3}$"", ""displayId"": ""D""}], ""english"": [{""id"": ""347577332"", ""text"": ""$\\frac{2}{3}+e^{3}$"", ""displayId"": ""A""}, {""id"": ""347577333"", ""text"": ""$\\frac{4}{3}+e^{3}$"", ""displayId"": ""B""}, {""id"": ""347577334"", ""text"": ""$\\frac{2}{3}$"", ""displayId"": ""C""}, {""id"": ""347577335"", ""text"": ""$\\frac{4}{3}$"", ""displayId"": ""D""}]}","[""347577335""]","{""hindi"": """", ""english"": """"}","{""hindi"": """", ""english"": """"}","{""isMandatory"": false, ""correctMarks"": 4, ""incorrectMarks"": -1}",,approved,,,0,,1785668031,1785991966,D,$\frac{4}{3}$,"## Concept
+
+Rewrite the equation into a first-order linear differential equation and solve using an integrating factor.
+
+## Formula
+
+$$\frac{dy}{dx} + P(x)y = Q(x) \implies y \cdot e^{\int P(x)dx} = \int Q(x)e^{\int P(x)dx}dx + C$$
+
+## Steps
+
+1. Simplify the differential equation using $1 + \tan^2 x = \sec^2 x$:
+   $$\frac{dy}{dx} + 3\sec^2 x \cdot y = \sec^2 x$$
+
+2. Calculate the integrating factor:
+   $$\text{I.F.} = e^{\int 3\sec^2 x\,dx} = e^{3\tan x}$$
+
+3. Find the general solution by integrating:
+   $$y \cdot e^{3\tan x} = \int \sec^2 x \cdot e^{3\tan x}\,dx + C = \frac{1}{3}e^{3\tan x} + C \implies y = \frac{1}{3} + C e^{-3\tan x}$$
+
+4. Use the initial condition $y(0) = \frac{1}{3} + e^3$ to find $C$:
+   $$\frac{1}{3} + C = \frac{1}{3} + e^3 \implies C = e^3$$
+
+5. Substitute $x = \frac{\pi}{4}$ into $y(x) = \frac{1}{3} + e^{3(1 - \tan x)}$:
+   $$y\left(\frac{\pi}{4}\right) = \frac{1}{3} + e^{3(1 - 1)} = \frac{1}{3} + 1 = \frac{4}{3}$$
+
+## Answer
+
+**Answer:** $\frac{4}{3}$ -> (D)
+
+## Note
+
+Remember that $\tan^2 x + 1 = \sec^2 x$ reduces the coefficient $P(x)$ to a direct derivative of $\tan x$."

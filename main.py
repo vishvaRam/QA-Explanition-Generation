@@ -14,9 +14,9 @@ load_dotenv()
 INPUT_CSV = "Data/data-QA-JEE-Data_preprocessed.csv"
 OUTPUT_CSV = "Data/JEE_explanations.csv"
 MODEL = os.getenv("OPENROUTER_MODEL", "openai/gpt-6-luna")
-DEFAULT_N = 5  # new questions to generate per run
-BATCH_SIZE = 5  # questions per abatch call
-MAX_CONCURRENCY = 5  # parallel requests inside one batch
+DEFAULT_N = 10  # new questions to generate per run
+BATCH_SIZE = 10  # questions per abatch call
+MAX_CONCURRENCY = 10  # parallel requests inside one batch
 
 # Columns the Superteacher viewer reads, added on top of the original CSV columns
 EXTRA_COLUMNS = ["correct_display_id", "correct_answer", "explanation_markdown"]
